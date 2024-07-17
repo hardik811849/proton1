@@ -122,7 +122,7 @@ const KeyFeatures = () => {
                   className="w-[20%] "
                 />
                 <p className="font-thin text-[15px] w-[100%]">
-                  High-Speed Transactions
+                  Multi-Chain Support
                 </p>
               </div>
               <div className="absolute md:top-14 left-[75%] lg:top-14 left-[75%] xl:top-14 left-[75%] 2xl:top-14 left-[75%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -134,7 +134,7 @@ const KeyFeatures = () => {
                   className="w-[20%] "
                 />
                 <p className="font-thin text-[15px] w-[100%]">
-                  Enhanced Security
+                  Multi ATS Listing
                 </p>
               </div>
               <div className="absolute md:top-[45%] -left-28 lg:top-[45%] -left-48 xl:top-[45%] -left-48 2xl:top-[45%] -left-48 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -146,7 +146,7 @@ const KeyFeatures = () => {
                   className="w-[20%] "
                 />
                 <p className="font-thin text-[15px] w-[100%]">
-                  Low Transaction Fees{" "}
+                  Multi Token Standard
                 </p>
               </div>
               <div className="absolute md:top-[45%] left-[27rem] lg:top-[45%] left-[27rem] xl:top-[45%] left-[27rem] 2xl:top-[45%] left-[90%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -158,7 +158,7 @@ const KeyFeatures = () => {
                   className="w-[20%] "
                 />
                 <p className="font-thin text-[15px] w-[100%]">
-                  Decentralized Network
+                  Powerful Proton Portfolio
                 </p>
               </div>
               <div className="absolute md:top-[75%] -left-10 lg:top-[75%] -left-36 top-[75%] -left-36 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -195,7 +195,7 @@ const KeyFeatures = () => {
                 className="w-[20%] "
               />
               <p className="font-thin text-[15px] w-[100%]">
-                High-Speed Transactions
+                Multi-Chain Support{" "}
               </p>
             </div>
             <div className=" flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -207,7 +207,7 @@ const KeyFeatures = () => {
                 className="w-[20%] "
               />
               <p className="font-thin text-[15px] w-[100%]">
-                Enhanced Security
+                Multi ATS Listing
               </p>
             </div>
             <div className=" flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -219,7 +219,7 @@ const KeyFeatures = () => {
                 className="w-[20%] "
               />
               <p className="font-thin text-[15px] w-[100%]">
-                Low Transaction Fees
+                Multi Token Standard
               </p>
             </div>
             <div className=" flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
@@ -231,7 +231,7 @@ const KeyFeatures = () => {
                 className="w-[20%] "
               />
               <p className="font-thin text-[15px] w-[100%]">
-                Decentralized Network
+                Powerful Proton Portfolio
               </p>
             </div>
             <div className=" flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
