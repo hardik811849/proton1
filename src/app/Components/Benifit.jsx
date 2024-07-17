@@ -4,7 +4,7 @@ const Benifit = () => {
   return (
     <div>
       <div className=" text-white w-[90%] mx-auto mt-10">
-        <h2 className="text-[50px] font-thin text-center mb-[17px]">Benifit</h2>
+        <h2 className="text-[50px] font-thin text-center mb-[17px]">Benefit</h2>
         <p className="w-[40%] mx-auto leading-8 opacity-75 font-thin text-center">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
