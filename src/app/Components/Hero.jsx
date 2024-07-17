@@ -109,11 +109,11 @@ const Hero = () => {
       <div className="relative -z-10 md:-top-14 lg:-top-24 xl:-top-40 2xl:-top-52 ">
         <div className="border rounded-lg flex flex-col items-center base:py-[10px] px-[10px] md:py-[10px] px-[10px] lg:py-[20px] lg:px-[30px] xl:py-[30px] xl:px-[70px]  2xl:py-[88px] 2xl:px-[160px]  w-fit mx-auto">
           <p className="base:text-[30px] md:text-[40px] lg:text-[60px] xl:text-[90px] text-center font-thin radial-gradient">
-            Accelerate Crypto World
+            Reinventing Real Estate Investment
           </p>
           <p className="base:text-[15px] md:text-[20px] text-center font-thin w-[65%] mt-6">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            A Blockchain-powered Security Token, designed to unlock liquidity
+            for owners and investors of yield-bearing Commercial Real Estate.
           </p>
           <button className="bg-[#B6BAFE] text-[#101222] rounded-full p-2 text-[15px] font-medium w-36 mt-6 mx-auto">
             Invest Now

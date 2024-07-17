@@ -14,21 +14,39 @@ const Roadmap = () => {
           </h1>
         </div>
         <div className="border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]  p-14 ">
-          <h2 className="text-[30px] font-thin">Lorem Ipsum Drec</h2>
+          <h2 className="text-[30px] font-thin">Expansion and Integration</h2>
           <p className="font-thin text-[15px] leading-9">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
+            Tokenization of Existing Properties
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Partnership with Real Estate Leader Group
+          </p>
+          <p className="font-thin text-[15px] leading-9">Investor Roadshow</p>
+          <p className="font-thin text-[15px] leading-9">
+            Smart Contract Audit
+          </p>
+          <p className="font-thin text-[15px] leading-9">Marketing Campaign </p>
+          <p className="font-thin text-[15px] leading-9">
+            Proton Proof of Concept (PoC) with Technology, Real Estate, Law
+            Firms and ATS Partners{" "}
           </p>
         </div>
         <div className="border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]  bg-white bg-opacity-10   p-14 ">
-          <h2 className="text-[30px] font-thin">Lorem Ipsum Drec</h2>
+          <h2 className="text-[30px] font-thin">
+            Technological Advancements and Marketplace Launch
+          </h2>
           <p className="font-thin text-[15px] leading-9">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
+            Launch of Proton Perpetual Marketplace
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            More Blockchains Integrated
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Mobile App Development
+          </p>
+          <p className="font-thin text-[15px] leading-9">Investor Webinars</p>
+          <p className="font-thin text-[15px] leading-9">
+            Integration of ATS for Enhanced Liquidity{" "}
           </p>
         </div>
         <div>
@@ -42,21 +60,34 @@ const Roadmap = () => {
           </h1>
         </div>
         <div className="border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]   p-14 ">
-          <h2 className="text-[30px] font-thin">Lorem Ipsum Drec</h2>
+          <h2 className="text-[30px] font-thin">
+            Product and Service Diversification
+          </h2>
           <p className="font-thin text-[15px] leading-9">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
+            Introduction of Tokenization Services
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Enhanced Reporting Tools
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Sustainability Initiatives
+          </p>
+          <p className="font-thin text-[15px] leading-9">Community Building</p>
+          <p className="font-thin text-[15px] leading-9">
+            Further Integration of ATS to Support New Markets
           </p>
         </div>
         <div className="border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]  bg-white bg-opacity-10  p-14 ">
-          <h2 className="text-[30px] font-thin">Lorem Ipsum Drec</h2>
+          <h2 className="text-[30px] font-thin">Consolidation and Growth</h2>
+          <p className="font-thin text-[15px] leading-9">Market Expansion</p>
           <p className="font-thin text-[15px] leading-9">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
+            Regulatory Compliance
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Token Buyback and Burn Program
+          </p>
+          <p className="font-thin text-[15px] leading-9">
+            Annual Review and Future Planning
           </p>
         </div>
         <div>
