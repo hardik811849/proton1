@@ -36,8 +36,8 @@ const KeyFeatures = () => {
   }, []);
   return (
     <div className="relative">
-      <div className="grid lg:grid-cols-1 xl:grid-cols-4 items-center lg:w-[100%] xl:w-[85%] 2xl:w-[90%] mx-auto lg:gap-1 xl:gap-2 2xl:gap-10">
-        <div className="lg:col-span-2 md:w-[90%] lg:w-[90%] mx-auto p-10">
+      <div className="grid lg:grid-cols-1 xl:grid-cols-4 items-center  lg:w-[100%] xl:w-[85%] 2xl:w-[90%] mx-auto lg:gap-1 xl:gap-2 2xl:gap-10">
+        <div className="lg:col-span-2 base:w-[90%] md:w-[90%] lg:w-[90%] mx-auto p-10">
           <h2 className="font-thin text-[60px]">Key Features</h2>
           <p className="font-thin text-[15px] base:leading-8 lg:leading-9 pb-10 lg:w-[90%] xl:w-[70%]">
             It is a long established fact that a reader will be distracted by
@@ -49,8 +49,8 @@ const KeyFeatures = () => {
             About Us
           </button>
         </div>
-        <div className="lg:col-span-1 xl:col-span-2 relative">
-          <div className="relative md:w-[29rem] h-[30rem] lg:w-[35rem] h-[35rem] mx-auto">
+        <div className="lg:col-span-1 xl:col-span-2 base:w-[90%] md:w-[90%] lg:w-[90%] relative">
+          <div className="relative  md:w-[26rem] md:h-[30rem] lg:w-[35rem] lg:h-[35rem] mx-auto ">
             <svg
               className="w-full h-full"
               viewBox="0 0 100 100"
@@ -88,8 +88,9 @@ const KeyFeatures = () => {
                 transform="rotate(135 50 50)"
               />
             </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-20 flex items-center justify-center ">
               <Image
+                draggable="false"
                 ref={spearRef}
                 className="w-[40%]"
                 src={spear}
@@ -98,22 +99,23 @@ const KeyFeatures = () => {
                 height={500}
               />
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-20  flex items-center justify-center ">
               <Image
+                draggable="false"
                 className="w-[10%]"
                 src={protonP}
                 alt="spear"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
               />
             </div>
             <div
               ref={gradientRef}
-              className="absolute inset-0 base:top-[30%] base:left-24 md:top-[30%] md:left-32 lg:top-36 lg:left-[12rem] xl:top-36 xl:left-[12rem] 2xl:top-36 left-[11rem] flex items-center justify-center  w-48 h-48 -z-10 key-opacity"
+              className="absolute inset-0 base:top-[20%] base:left-20 md:top-[30%] md:left-32 lg:top-36 lg:left-[12rem] xl:top-36 xl:left-[12rem] 2xl:top-44 left-[11rem] flex items-center justify-center base:w-40 md:w-48 h-48 -z-10 key-opacity"
             />
 
-            <div className="hidden md:block">
-              <div className="absolute md:top-14 -left-14 lg:top-14 -left-24 xl:top-14 -left-24 2xl:top-14 -left-24 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+            <div className="hidden md:block ">
+              <div className="absolute md:top-14 -left-14 lg:top-14 -left-24 xl:top-14 -left-24 2xl:top-14 -left-24 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={money}
                   alt="spear"
@@ -125,7 +127,7 @@ const KeyFeatures = () => {
                   Multi-Chain Support
                 </p>
               </div>
-              <div className="absolute md:top-14 left-[75%] lg:top-14 left-[75%] xl:top-14 left-[75%] 2xl:top-14 left-[75%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+              <div className="absolute md:top-14 md:left-[75%] lg:top-14 lg:left-[75%] xl:top-14 xl:left-[75%] 2xl:top-14 left-[75%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={secure}
                   alt="spear"
@@ -137,7 +139,7 @@ const KeyFeatures = () => {
                   Multi ATS Listing
                 </p>
               </div>
-              <div className="absolute md:top-[45%] -left-28 lg:top-[45%] -left-48 xl:top-[45%] -left-48 2xl:top-[45%] -left-48 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+              <div className="absolute md:top-[45%] md:-left-32 lg:top-[45%] lg:-left-40 xl:top-[45%] xl:-left-48 2xl:top-[45%] -left-48 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={dollar}
                   alt="spear"
@@ -149,7 +151,7 @@ const KeyFeatures = () => {
                   Multi Token Standard
                 </p>
               </div>
-              <div className="absolute md:top-[45%] left-[27rem] lg:top-[45%] left-[27rem] xl:top-[45%] left-[27rem] 2xl:top-[45%] left-[90%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+              <div className="absolute md:top-[45%] md:left-[22rem] lg:top-[45%] lg:left-[27rem] xl:top-[45%] xl:left-[27rem] 2xl:top-[45%] left-[90%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={decentralised}
                   alt="spear"
@@ -161,7 +163,7 @@ const KeyFeatures = () => {
                   Powerful Proton Portfolio
                 </p>
               </div>
-              <div className="absolute md:top-[75%] -left-10 lg:top-[75%] -left-36 top-[75%] -left-36 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+              <div className="absolute md:top-[75%] md:-left-10 lg:top-[75%] lg:-left-36 top-[75%] -left-36 flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={resize}
                   alt="spear"
@@ -171,7 +173,7 @@ const KeyFeatures = () => {
                 />
                 <p className="font-thin text-[15px] w-[100%]">Scalability</p>
               </div>
-              <div className="absolute md:top-[75%] left-[70%] lg:top-[75%] left-[70%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
+              <div className="absolute md:top-[75%] left-[70%] lg:top-[75%] left-[70%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
                   src={small_talk}
                   alt="spear"
@@ -185,7 +187,7 @@ const KeyFeatures = () => {
               </div>
             </div>
           </div>
-          <div className="base:flex flex-col gap-3 w-[90%] mx-auto md:hidden">
+          <div className="base:flex flex-col gap-3 w-[80%] mx-auto md:hidden ">
             <div className=" flex items-center gap-4 border-2 border-zinc-700 bg-[#101222] rounded-full p-5 md:w-[35%] lg:w-[45%]">
               <Image
                 src={money}

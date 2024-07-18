@@ -69,6 +69,7 @@ const Hero = () => {
         <div className="relative md flex items-center justify-center ">
           <div className="absolute lg:-top-10  xl:-top-10  2xl:top-16 base:w-[50%] h-[100%]  md:w-96 h-96  gradient-opacity animate-scaleUpDown"></div>
           <Image
+            draggable={false}
             src={proton_bubble}
             alt="dot"
             width={500}
@@ -109,6 +110,7 @@ const Hero = () => {
       <div className="relative -z-10 md:-top-14 lg:-top-24 xl:-top-40 2xl:-top-52 ">
         <div className="border rounded-lg flex flex-col items-center base:py-[10px] px-[10px] md:py-[10px] px-[10px] lg:py-[20px] lg:px-[30px] xl:py-[30px] xl:px-[70px]  2xl:py-[88px] 2xl:px-[160px]  w-fit mx-auto">
           <p className="base:text-[30px] md:text-[40px] lg:text-[60px] xl:text-[90px] text-center font-thin radial-gradient">
+            {/* Accelerate Crypto World */}
             Reinventing Real Estate Investment
           </p>
           <p className="base:text-[15px] md:text-[20px] text-center font-thin w-[65%] mt-6">

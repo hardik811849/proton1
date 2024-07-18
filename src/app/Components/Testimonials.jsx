@@ -22,7 +22,7 @@ const Testimonials = () => {
   return (
     <div>
       <h2 className="text-[50px] font-thin text-center mb-[17px] mt-16">
-        Testimonials
+        Socials
       </h2>
       <Carousel>
         <CarouselContent>
