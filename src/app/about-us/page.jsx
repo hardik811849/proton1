@@ -5,6 +5,16 @@ import eclips from "@/app/assets/Ellipse 1.svg";
 import spear from "@/app/assets/sphere@4x-8 1.svg";
 import shld from "@/app/assets/shld@4x-8 1.svg";
 import blocks from "@/app/assets/blocks.svg";
+import Partner from "../Components/Partner";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import team1 from "@/app/assets/team2.svg";
+import team2 from "@/app/assets/team3.svg";
+import team3 from "@/app/assets/team4.svg";
+import team4 from "@/app/assets/team5.svg";
 
 const Aboutus = () => {
   return (
@@ -32,7 +42,7 @@ const Aboutus = () => {
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using Content here, content here, making it
+          letters, as opposed to using 'Content here, content here', making it
           look like readable English. Many desktop publishing packages and web
           page
         </p>
@@ -50,8 +60,8 @@ const Aboutus = () => {
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using Content
-                here, content here, making it look like readable English. Many
+                normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English. Many
                 desktop publishing packages and web page It is a long
                 established fact that a reader will
               </p>
@@ -62,8 +72,8 @@ const Aboutus = () => {
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using Content
-                here, content here, making it look like readable English. Many
+                normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English. Many
                 desktop publishing packages and web page It is a long
                 established fact that a reader will
               </p>
@@ -80,8 +90,8 @@ const Aboutus = () => {
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using Content
-                here, content here, making it look like readable English. Many
+                normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English. Many
                 desktop publishing packages and web page It is a long
                 established fact that a reader will
               </p>
@@ -93,17 +103,145 @@ const Aboutus = () => {
       <div className="bg-[#17192C] p-10">
         <h2 className="text-[75px] font-thin text-center ">Our Technology</h2>
 
-        {/* <div className="grid grid-cols-2 gap-10 bg-white bg-opacity-5">
-          <Image src={spear} alt="spear" width={500} height={500} />
-          <div className="border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222] base:p-6 md:p-14 ">
-            <h2 className="text-[30px] font-thin">Scalability</h2>
-            <p className="font-thin text-[15px]">
-              Protect your assets with advanced encryption and robust security
-              measures
+        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto bg-white bg-opacity-5 rounded-3xl p-10">
+          <div className="w-[90%] mx-auto flex items-center justify-center">
+            <Image
+              src={spear}
+              alt="spear"
+              width={500}
+              height={500}
+              className="w-[50%]"
+            />
+          </div>
+          <div className="rounded-3xl  base:p-6 md:p-14 ">
+            <h2 className="text-[30px] font-light">Innovation</h2>
+            <p className="font-thin text-[15px] leading-8">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using Content here, content
+              here, making it look like readable English. Many desktop
+              publishing packages and web page It is a long established fact
+              that a reader will be distracted by the readable content of a page
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less
             </p>
           </div>
-        </div> */}
+        </div>
+
+        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto bg-[#101222] bg-opacity-75 rounded-3xl p-10 mt-10">
+          <div className="rounded-3xl  base:p-6 md:p-14 ">
+            <h2 className="text-[30px] font-light">Security</h2>
+            <p className="font-thin text-[15px] leading-8">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using Content here, content
+              here, making it look like readable English. Many desktop
+              publishing packages and web page It is a long established fact
+              that a reader will be distracted by the readable content of a page
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less
+            </p>
+          </div>
+          <div className="w-[90%] mx-auto flex items-center justify-center">
+            <Image
+              src={shld}
+              alt="spear"
+              width={500}
+              height={500}
+              className="w-[50%]"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-10 w-[90%] mx-auto bg-white bg-opacity-5 rounded-3xl p-10 mt-10">
+          <div className="w-[90%] mx-auto flex items-center justify-center">
+            <Image
+              src={blocks}
+              alt="spear"
+              width={500}
+              height={500}
+              className="w-[50%]"
+            />
+          </div>
+          <div className="rounded-3xl  base:p-6 md:p-14 ">
+            <h2 className="text-[30px] font-light">Scalability</h2>
+            <p className="font-thin text-[15px] leading-8">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using Content here, content
+              here, making it look like readable English. Many desktop
+              publishing packages and web page It is a long established fact
+              that a reader will be distracted by the readable content of a page
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div>
+        <h2 className="text-[75px] font-thin text-center ">Our Team</h2>
+
+        <div>
+          <Carousel>
+            <CarouselContent>
+              <CarouselItem className="basis-1/3 relative">
+                <Image
+                  src={team1}
+                  alt="team1"
+                  width={500}
+                  height={500}
+                  className="relative"
+                />
+                <div className="absolute bottom-10 left-10 text-[25px] font-thin">
+                  Nishika Shah
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 relative">
+                <Image
+                  src={team2}
+                  alt="team1"
+                  width={500}
+                  height={500}
+                  className="relative"
+                />
+                <div className="absolute bottom-10 left-10 text-[25px] font-thin">
+                  Nishika Shah
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 relative">
+                <Image
+                  src={team3}
+                  alt="team1"
+                  width={500}
+                  height={500}
+                  className="relative"
+                />
+                <div className="absolute bottom-10 left-10 text-[25px] font-thin">
+                  Nishika Shah
+                </div>
+              </CarouselItem>
+              <CarouselItem className="basis-1/3 relative">
+                <Image
+                  src={team1}
+                  alt="team1"
+                  width={500}
+                  height={500}
+                  className="relative"
+                />
+                <div className="absolute bottom-10 left-10 text-[25px] font-thin">
+                  Nishika Shah
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </div>
+
+      <Partner />
     </>
   );
 };

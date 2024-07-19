@@ -11,10 +11,10 @@ const Roadmap = () => {
       <div className="relative w-full">
         <div
           style={{ backgroundImage: `url(${glowline.src})` }}
-          className="absolute top-0 left-0 hidden xl:block w-full h-full bg-center bg-no-repeat -z-50"
+          className="absolute top-0 left-0 hidden lg:block w-full h-full bg-center bg-no-repeat -z-50"
         ></div>
 
-        <div className="grid lg:grid-cols-1 xl:grid-cols-2 gap-x-28 gap-y-14 base:w-[90%] md:w-[80%] mx-auto relative z-50">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-x-28 gap-y-14 base:w-[90%] md:w-[80%] mx-auto relative z-50">
           <div className="base:order-1">
             <h1 className="text-[200px] text-[#7A7FD5] text-opacity-40 text-center font-thin">
               01
@@ -40,7 +40,7 @@ const Roadmap = () => {
               Firms and ATS Partners
             </p>
           </div>
-          <div className="base:order-4 lg:order-4 xl:order-3 border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]  base:p-4 md:p-14">
+          <div className="base:order-4 md:order-4 lg:order-3 xl:order-3 border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222]  base:p-4 md:p-14">
             <h2 className="text-[30px] font-thin">
               Technological Advancements and Marketplace Launch
             </h2>
@@ -58,7 +58,7 @@ const Roadmap = () => {
               Integration of ATS for Enhanced Liquidity
             </p>
           </div>
-          <div className="base:order-3 lg:order-3 xl:order-4">
+          <div className="base:order-3 md:order-3 lg:order-4 xl:order-4">
             <h1 className="text-[200px] text-[#7A7FD5] text-opacity-40 text-center font-thin">
               02
             </h1>
@@ -88,7 +88,7 @@ const Roadmap = () => {
               Further Integration of ATS to Support New Markets
             </p>
           </div>
-          <div className="base:order-8 lg:order-8 xl:order-7 border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222] base:p-4 md:p-14">
+          <div className="base:order-8 md:order-8 lg:order-7 xl:order-7 border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 bg-[#101222] base:p-4 md:p-14">
             <h2 className="text-[30px] font-thin">Consolidation and Growth</h2>
             <p className="font-thin text-[15px] leading-9">Market Expansion</p>
             <p className="font-thin text-[15px] leading-9">
@@ -101,7 +101,7 @@ const Roadmap = () => {
               Annual Review and Future Planning
             </p>
           </div>
-          <div className="base:order-7 lg:order-7 xl:order-8">
+          <div className="base:order-7 md:order-7 lg:order-8 xl:order-8">
             <h1 className="text-[200px] text-[#7A7FD5] text-opacity-40 text-center font-thin">
               04
             </h1>

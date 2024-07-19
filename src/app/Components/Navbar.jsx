@@ -12,7 +12,6 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { Menu } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -43,7 +42,7 @@ const Navbar = () => {
             </li>
             <li>
               <button className="bg-[#B6BAFE] text-[#101222] rounded-full p-2 text-[15px]">
-                <Link href="/">Contact us</Link>
+                <Link href="/contact-us">Contact us</Link>
               </button>
             </li>
           </ul>

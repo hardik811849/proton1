@@ -49,48 +49,42 @@ const Footer = () => {
         <div className="grid base:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 mt-16">
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Learn</h2>
-            <div className="opacity-35 font-thin flex flex-col">
+            <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Face value simulation</Link>
-              <Link href={"#"}>Our Reverses</Link>
+              <Link href={"#"}>how it works</Link>
               <Link href={"#"}>Bounus ranking</Link>
-              <Link href={"#"}>Group discount</Link>
-              <Link href={"#"}>Investment simulation</Link>
-              <Link href={"#"}>Current performance</Link>
             </div>
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Our solutions</h2>
-            <div className="opacity-35 font-thin flex flex-col">
+            <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Proton</Link>
               <Link href={"#"}>Auctions</Link>
-              <Link href={"#"}>90% downside protection</Link>
               <Link href={"#"}>Network staking</Link>
               <Link href={"#"}>Get whitelisted</Link>
             </div>
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Library</h2>
-            <div className="opacity-35 font-thin flex flex-col">
-              <Link href={"#"}>Our solutions</Link>
+            <div className="opacity-55 font-thin flex flex-col">
+              <Link href={"#"}>Github</Link>
               <Link href={"#"}>whitepaper</Link>
-              <Link href={"#"}>Light paper</Link>
               <Link href={"#"}>Aution document</Link>
               <Link href={"#"}>pitch deck</Link>
               <Link href={"#"}>one pager</Link>
-              <Link href={"#"}>Syndication economy</Link>
             </div>
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Liquidity 24/7</h2>
-            <div className="opacity-35 font-thin flex flex-col">
-              <Link href={"#"}>Smartswap</Link>
-              <Link href={"#"}>Liquidity reverse</Link>
+            <div className="opacity-55 font-thin flex flex-col">
+              <Link href={"#"}>Liquidity </Link>
               <Link href={"#"}>Exchanges</Link>
+              <Link href={"#"}>Alternative Trading System</Link>
             </div>
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Community</h2>
-            <div className="opacity-35 font-thin flex flex-col">
+            <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Telegram</Link>
               <Link href={"#"}>Facebook</Link>
               <Link href={"#"}>Linkedin</Link>
@@ -98,15 +92,13 @@ const Footer = () => {
               <Link href={"#"}>Instagram</Link>
               <Link href={"#"}>Reddit</Link>
               <Link href={"#"}>Medium</Link>
-              <Link href={"#"}>Crepig</Link>
-              <Link href={"#"}>Twitch</Link>
-              <Link href={"#"}>Discord</Link>
+              <Link href={"#"}>Events</Link>
             </div>
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">About</h2>
-            <div className="opacity-35 font-thin">
-              <Link href={"#"}>About us</Link> <br />
+            <div className="opacity-55 font-thin">
+              <Link href={"/about-us"}>About us</Link> <br />
               <Link href={"#"}>Our Team</Link> <br />
               <Link href={"#"}>Vision</Link> <br />
               <Link href={"#"}>Awards</Link> <br />
@@ -118,8 +110,8 @@ const Footer = () => {
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Help</h2>
-            <div className="opacity-35 font-thin">
-              <Link href={"#"}>Tutorial</Link> <br />
+            <div className="opacity-55 font-thin">
+              <Link href={"#"}>Reports</Link> <br />
               <Link href={"#"}>Contact request</Link> <br />
               <Link href={"#"}>Help centre</Link> <br />
               <Link href={"#"}>Announcements</Link> <br />

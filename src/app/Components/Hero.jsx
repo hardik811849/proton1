@@ -43,7 +43,7 @@ const Hero = () => {
           alt="dot"
           width={500}
           height={500}
-          className="w-[2%] hidden xl:block  z-10"
+          className="w-[2%] hidden lg:block  z-10"
         />
         <Image
           src={token3}
@@ -64,7 +64,7 @@ const Hero = () => {
           alt="dot"
           width={500}
           height={500}
-          className="w-[10%] hidden xl:block z-10"
+          className="w-[10%] hidden lg:block z-10"
         />
         <div className="relative md flex items-center justify-center ">
           <div className="absolute lg:-top-10  xl:-top-10  2xl:top-16 base:w-[50%] h-[100%]  md:w-96 h-96  gradient-opacity animate-scaleUpDown"></div>
@@ -82,7 +82,7 @@ const Hero = () => {
           alt="dot"
           width={500}
           height={500}
-          className="w-[10%] hidden xl:block z-10"
+          className="w-[10%] hidden lg:block z-10"
         />
         <Image
           src={token1}
@@ -103,7 +103,7 @@ const Hero = () => {
           alt="dot"
           width={500}
           height={500}
-          className="w-[2%] hidden xl:block z-10"
+          className="w-[2%] hidden lg:block z-10"
         />
       </div>
 
