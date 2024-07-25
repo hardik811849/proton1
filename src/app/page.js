@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <Calculate /> */}
-      {/* <AboutSection /> */}
-      {/* <Graph /> */}
+      <Calculate />
+      <AboutSection />
+      <Graph />
       <KeyFeatures />
       <OurProperties />
       <Benifit />
       <HowitWorks />
-      {/* <Roadmap /> */}
+      <Roadmap />
       <Partner />
       <Events />
       <PressUs />
