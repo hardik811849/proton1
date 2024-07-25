@@ -60,7 +60,7 @@ const Navbar = () => {
               className="base:w-[50%] md:w-[10%]"
             />
           </Link>
-          <ul className="xl:w-[95%] 2xl:w-[55%] hidden lg:flex  gap-7 items-center border-2 border-gray-700 p-2 px-4 rounded-full">
+          <ul className="xl:w-[95%] 2xl:w-[47%] hidden lg:flex  gap-7 items-center border-2 border-gray-700 p-2 px-4 rounded-full">
             <li
               className=" font-thin text-[13px]"
               onClick={() => handleMenuItemClick("keyFeature")}
