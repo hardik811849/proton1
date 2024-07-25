@@ -19,12 +19,12 @@ export default function Home() {
     <>
       <Hero />
       {/* <Calculate /> */}
-      <AboutSection />
+      {/* <AboutSection /> */}
       {/* <Graph /> */}
       <KeyFeatures />
       <OurProperties />
       <Benifit />
-      {/* <HowitWorks /> */}
+      <HowitWorks />
       {/* <Roadmap /> */}
       <Partner />
       <Events />

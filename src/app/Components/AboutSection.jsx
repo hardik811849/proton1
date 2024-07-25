@@ -46,7 +46,7 @@ const AboutSection = () => {
         <hr className="w-[90%] opacity-10 h-[20px] mx-auto mt-32" />
       </div> */}
 
-      <div className="mt-10 mb-20 text-center base:w-[90%] xl:w-[50%] mx-auto">
+      <div className="mb-20 text-center base:w-[90%] xl:w-[50%] mx-auto">
         <p className="leading-9 pb-10 text-[20px] font-thin">
           Proton Perpetual is a Delaware-based holding company with a robust
           portfolio of income-generating real estate assets.

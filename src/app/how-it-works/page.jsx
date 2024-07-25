@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import bg_about from "@/app/assets/Frame.svg";
 
 const HowitWorks = () => {
   return (

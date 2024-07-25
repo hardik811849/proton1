@@ -10,6 +10,7 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -20,78 +21,6 @@ const categories = [
   { id: 4, title: "Tokenizatiion", key: "Tokenizatiion" },
   { id: 4, title: "Auctions Rules", key: "AuctionsRules" },
 ];
-
-const faqData = {
-  GettingStarted: {
-    1: {
-      question: "What is Proton Token?",
-      answer:
-        "Proton Token is a digital security token on the blockchain that represents fractional ownership in a portfolio of revenue-generating real estate, managed by Proton Perpetual, a Delaware-based company.",
-    },
-    2: {
-      question: "How can I purchase Proton Tokens?",
-      answer:
-        "Proton Tokens can be purchased directly on the Proton Perpetual platform or through various Alternative Trading Systems (ATS) where they are listed, after completing a KYC verification process.",
-    },
-    3: {
-      question: "What makes Proton Token unique?",
-      answer:
-        "Proton Token offers multi-blockchain support, compliance with multiple ERC standards, high liquidity through ATS platforms, and adherence to strict regulatory standards, making it a secure and versatile investment in real estate.",
-    },
-    4: {
-      question:
-        "How can I monitor the performance of my investment in Proton Tokens?",
-      answer:
-        "Investors can track their investments using the Proton Perpetual dashboard, which provides real-time data on property performance, token valuation, and dividends.",
-    },
-  },
-  Offerings: {
-    1: {
-      question: "What regulatory standards does Proton Token comply with?",
-      answer:
-        "Proton Token adheres to all applicable securities and blockchain regulations, ensuring a secure and legally compliant investment environment.",
-    },
-    2: {
-      question: "Can I tokenize my real estate property with Proton Token?",
-      answer:
-        "While current tokens are linked to properties already in the Proton Perpetual portfolio, future offerings may include options for investors to tokenize their own properties.",
-    },
-    3: {
-      question: "Are there any legal restrictions on selling Proton Tokens?",
-      answer:
-        "Selling Proton Tokens is subject to securities and tax laws applicable in the jurisdiction of the seller and buyer. We recommend consulting with a legal advisor for specific guidance.",
-    },
-    4: {
-      question: "What happens if regulatory changes affect Proton Tokens?",
-      answer:
-        "Proton Perpetual actively monitors regulatory landscapes and will update investors on any changes that could impact their investments and the tradability of Proton Tokens.",
-    },
-  },
-  Portfolio: {
-    1: {
-      question: "What should I do if I encounter an issue with a transaction?",
-      answer:
-        "If you experience a problem with a transaction on the Proton Perpetual platform or Proton Perpetual Marketplace, contact customer support immediately with details of the transaction for assistance.",
-    },
-    2: {
-      question: "How can I recover my account if I lose access?",
-      answer:
-        "To recover your account, use the password recovery tools provided on the platform. If further assistance is needed, contact customer support with your account details and identification.",
-    },
-    3: {
-      question: "Why isn't my transaction appearing in my dashboard?",
-      answer:
-        "If a transaction isn't showing up in your dashboard, it may be due to a delay in blockchain confirmation. Wait a few minutes, and if the issue persists, contact support.",
-    },
-    4: {
-      question: "How do I update my KYC information on the platform?",
-      answer:
-        "To update your KYC information, log in to your account on the platform, navigate to account settings, and follow the prompts for KYC update. Ensure you have all required documents handy.",
-    },
-  },
-  Tokenizatiion: {},
-  AuctionsRules: {},
-};
 
 const HowitWorks = () => {
   return (
@@ -147,32 +76,123 @@ const HowitWorks = () => {
           </TabList>
 
           <TabPanels mt={10}>
-            {categories.map((category) => (
-              <TabPanel key={category.id}>
-                <Accordion allowToggle>
-                  {Object.values(faqData[category.key]).map((faq, index) => (
-                    <AccordionItem
-                      key={index}
-                      bg={"rgba(255,255,255,0.05)"}
-                      rounded={"2xl"}
-                      mb={2}
-                      border={"none"}
-                      p={5}
-                    >
-                      <h2>
-                        <AccordionButton>
-                          <Box as="span" flex="1" textAlign="left">
-                            {faq.question}
-                          </Box>
-                          <AccordionIcon />
-                        </AccordionButton>
-                      </h2>
-                      <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </TabPanel>
-            ))}
+            {/* {categories.map((category) => ( */}
+            <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
+              <Text mb={6} fontWeight={"thin"}>
+                Proton Perpetual is a tokenized holding company with a robust
+                real estate portfolio, offering investors an opportunity to
+                explore and initiate an investment. By visiting the Proton
+                Perpetual website, investors can discover the advantages of this
+                unique investment opportunity. To invest, simply click the
+                Invest Now button, which will seamlessly redirect you to Proton
+                Perpetuals ATS (Alternative Trading System) partner, a SEC and
+                FINRA-licensed platform.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The registration process involves completing the onboarding
+                steps provided by the ATS partner, allowing you to set up and
+                activate your account. As part of the compliance and
+                verification procedures, you will need to fulfill the necessary
+                Know Your Customer (KYC) and Anti-Money Laundering (AML)
+                requirements to authenticate your identity and investment
+                eligibility. Once the verification process is complete, you will
+                be whitelisted as an approved investor, enabling you to
+                participate in Proton Perpetuals offerings through the ATS
+                platform.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                With the whitelisting process finalized, you are now ready to
+                engage in the investment opportunity. Both Proton Perpetual and
+                the ATS partner are committed to providing ongoing assistance
+                throughout your investment journey, ensuring a seamless and
+                secure experience.
+              </Text>
+            </TabPanel>
+            <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
+              <Text mb={6} fontWeight={"thin"}>
+                Proton Perpetuals portfolio is a strategically curated
+                collection of high-value real estate assets, structured as
+                tokenized company stock. Each Proton token represents a
+                fractional ownership stake in the entire Proton Perpetual
+                portfolio, enabling investors to share in the performance and
+                growth of the assets.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The portfolio is diversified across various real estate sectors,
+                including commercial properties, multi-family residences, and
+                strategically located hotels. The commercial investments include
+                premium office buildings, retail outlets, and industrial
+                properties selected to maximize occupancy and rental yields. The
+                multi-family residences and hotels are chosen for their ability
+                to consistently demand high occupancy and generate stable income
+                streams.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                Geographically, the real estate assets are spread across
+                economically resilient regions, minimizing risk and enhancing
+                the potential for capital appreciation. Proton Perpetual employs
+                value-enhancing strategies, such as targeted property
+                improvements and the adoption of advanced management practices,
+                to boost asset performance and attract high-quality tenants.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                Transparency is a key focus, with regular independent property
+                assessments and readily available performance data, including
+                occupancy rates and revenue figures. The tokenization of the
+                company stock allows for fractional sales and purchases,
+                offering investors greater liquidity and flexibility to adjust
+                their investment positions as needed.
+              </Text>
+            </TabPanel>
+            <TabPanel
+              bg={"rgba(255,255,255,0.05)"}
+              rounded={"xl"}
+              p={10}
+            ></TabPanel>
+            <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
+              <Text mb={6} fontWeight={"thin"}>
+                Protons tokenization process is meticulously designed to ensure
+                a secure and efficient transition of assets onto the blockchain.
+                The process begins with the strategic acquisition of assets that
+                have demonstrated robust financial performance and substantial
+                growth potential, aligning with Protons high standards for
+                tokenization.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                Next, a comprehensive due diligence process is conducted to
+                validate the quality of each asset. This includes an in-depth
+                analysis of financial health, market positioning, and potential
+                risks to ensure that only the most viable assets are selected
+                for tokenization.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The digital security tokens representing fractional ownership
+                are then minted using the ERC 3643 digital security token
+                standards on the blockchain. This process ensures that each
+                token provides a secure and transparent representation of
+                ownership.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                To enhance the availability and liquidity of the tokens, they
+                are integrated into multiple Automated Trading Systems (ATS).
+                This setup supports an active secondary market, facilitating the
+                buying, selling, and trading of tokens across different trading
+                platforms. Initially, the Proton tokens will be listed on three
+                ATS platforms, the names of which will be announced soon.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The Proton portfolio is designed to generate an 8% yield per
+                annum, paid out monthly, ensuring consistent returns for
+                investors and increasing the attractiveness of the Proton
+                tokens.
+              </Text>
+            </TabPanel>
+            <TabPanel
+              bg={"rgba(255,255,255,0.05)"}
+              rounded={"xl"}
+              p={10}
+            ></TabPanel>
+            {/* ))} */}
           </TabPanels>
         </Tabs>
       </Box>

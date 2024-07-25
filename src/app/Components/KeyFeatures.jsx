@@ -35,7 +35,7 @@ const KeyFeatures = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="relative" id="keyFeature">
+    <div className="relative pb-20 -mt-14" id="keyFeature ">
       <div className="grid lg:grid-cols-1 xl:grid-cols-4 items-center  lg:w-[100%] xl:w-[85%] 2xl:w-[90%] mx-auto lg:gap-1 xl:gap-2 2xl:gap-10">
         <div className="lg:col-span-2 base:w-[90%] md:w-[90%] lg:w-[90%] mx-auto p-10">
           <h2 className="font-thin text-[60px]">Proton Token</h2>
