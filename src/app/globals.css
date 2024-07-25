@@ -8,14 +8,15 @@
   margin: 0px;
 }
 body {
-  background-color: #101222;
-  color: white;
+  /* background-color: #101222; */
+  background-color: #101011 !important;
+  color: white !important;
 }
 .gradient-opacity {
   background: radial-gradient(
     circle closest-side,
-    rgba(182, 186, 254, 0.5),
-    rgba(16, 18, 34, 0.5)
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
   );
   border-radius: 50%;
 }
@@ -67,8 +68,8 @@ body {
 .key-opacity {
   background: radial-gradient(
     circle,
-    rgba(182, 186, 254, 0.5) 0%,
-    rgba(16, 18, 34, 0) 70%
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 2555, 255, 0) 70%
   );
 }
 
@@ -99,7 +100,7 @@ body {
   position: relative;
   border: 2px solid transparent;
   color: #fff;
-  background: #101222;
+  background: #101011;
   background-clip: padding-box;
   border-radius: 100px;
 }
@@ -114,13 +115,13 @@ body {
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: linear-gradient(to bottom, #101222 80%, #b6bafe);
+  background: linear-gradient(to bottom, #101011 80%, #3e3e3f);
 }
 .border_about {
   position: relative;
   border: 2px solid transparent;
   color: #fff;
-  background: #101222;
+  background: #101011;
   background-clip: padding-box;
   border-radius: 100px;
 }
@@ -135,10 +136,45 @@ body {
   z-index: -1;
   margin: -2px;
   border-radius: inherit;
-  background: linear-gradient(to top, #101222 80%, #b6bafe);
+  background: linear-gradient(to top, #101011 80%, #646464);
 }
 .text-gradient {
-  background: linear-gradient(to bottom, #7a7fd5, #101222);
+  background: linear-gradient(to bottom, #ff5800, #101222);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+.send::placeholder,
+.amount::placeholder {
+  font-size: 1.2em;
+  color: #999;
+}
+.slick-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.slick-prev,
+.slick-next {
+  font-size: 44px !important; /* Increase arrow size */
+  width: 100px; /* Increase button width */
+  height: 100px; /* Increase button height */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Optional: Change background color */
+  border-radius: 50%; /* Optional: Make buttons round */
+  z-index: 1; /* Ensure buttons are on top */
+  border: 1px solid red;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 44px; /* Increase arrow icon size */
+  color: #ff5800; /* Arrow color */
 }

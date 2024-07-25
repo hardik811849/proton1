@@ -6,16 +6,30 @@ import Benifit from "./Components/Benifit";
 import Roadmap from "./Components/Roadmap";
 import Partner from "./Components/Partner";
 import Testimonials from "./Components/Testimonials";
+import Calculate from "./Components/Calculate";
+import OurProperties from "./Components/OurProperties";
+import Events from "./Components/Events";
+import PressUs from "./Components/PressUs";
+import Faqs from "./Components/Faqs";
+import Graph from "./Components/Graph";
+import HowitWorks from "./Components/HowitWorks";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      {/* <Calculate /> */}
       <AboutSection />
+      {/* <Graph /> */}
       <KeyFeatures />
+      <OurProperties />
       <Benifit />
-      <Roadmap />
+      {/* <HowitWorks /> */}
+      {/* <Roadmap /> */}
       <Partner />
+      <Events />
+      <PressUs />
+      <Faqs />
       {/* <Testimonials /> */}
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@/app/assets/navbar/logo.svg";
+import logo from "@/app/assets/navbar/logo1.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -8,20 +8,20 @@ import { FaLinkedin } from "react-icons/fa";
 import { BsReddit } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import gray_logo from "@/app/assets/gray_logo.svg";
+import gray_logo from "@/app/assets/gray_logo1.svg";
 
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#17192C] base:p-4 md:p-20">
+      <div className="bg-[#161616] base:p-4 md:p-20  mt-20">
         <div className="w-[90%] mx-auto flex justify-between base:flex-col base:items-center md:flex-col md:items-center lg:flex-col items-center xl:flex-row">
-          <div>
+          <div className="flex flex-col base:items-center xl:items-start">
             <Image
               src={logo}
               alt="logo"
               width={40}
               height={40}
-              className="base:w-[100%] md:w-[100%]"
+              className="base:w-[100%] md:w-[30%] lg:w-[30%] xl:w-[30%] "
             />
             <div className="flex gap-4 mt-4">
               <FaLinkedin size={36} />
@@ -38,7 +38,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="w-full bg-white bg-opacity-20 border-2  border-white border-opacity-20 placeholder-white p-3 rounded-full "
               />
-              <button className="absolute right-2 top-2 bg-white rounded-full text-[#17192C] p-2 mr-1">
+              <button className="absolute  right-2 top-2 bg-[#ff5800] rounded-full text-[#fff] p-2 mr-1">
                 Subscribe
               </button>
             </div>
@@ -51,7 +51,8 @@ const Footer = () => {
             <h2 className="text-[23px] font-medium">Learn</h2>
             <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Face value simulation</Link>
-              <Link href={"#"}>how it works</Link>
+              <Link href={"#"}>How it Works</Link>
+              <Link href={"/how-to-invest"}>How to Invest</Link>
               <Link href={"#"}>Bounus ranking</Link>
             </div>
           </div>
@@ -112,7 +113,7 @@ const Footer = () => {
             <h2 className="text-[23px] font-medium">Help</h2>
             <div className="opacity-55 font-thin">
               <Link href={"#"}>Reports</Link> <br />
-              <Link href={"#"}>Contact request</Link> <br />
+              <Link href={"/contact-us"}>Contact Us</Link> <br />
               <Link href={"#"}>Help centre</Link> <br />
               <Link href={"#"}>Announcements</Link> <br />
             </div>
@@ -126,7 +127,7 @@ const Footer = () => {
             alt="logo"
             width={100}
             height={100}
-            className="w-[10%]"
+            className="w-[20%] text-center"
           />
           <p className="opacity-50 mt-4 font-thin">
             It is a long established fact that a reader{" "}

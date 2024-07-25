@@ -6,8 +6,7 @@ import about from "@/app/assets/Rectangle 38.svg";
 const AboutSection = () => {
   return (
     <>
-      <div className="relative md:top-16 lg:-top-24 w-full overflow-hidden">
-        {/* Background Image */}
+      {/* <div className="relative md:top-16 lg:-top-24 w-full overflow-hidden mt-40">
         <div className="absolute inset-0 z-0">
           <Image
             src={bg_design}
@@ -18,7 +17,6 @@ const AboutSection = () => {
           />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 p-11">
           <div className="absolute top-24 -left-[65rem] inset-0 -z-10 about-opacity"></div>
           <div className="flex base:flex-col md:flex-row lg:w-full xl:w-[90%] 2xl:w-[70%] mx-auto md:gap-12 lg:gap-24">
@@ -46,6 +44,19 @@ const AboutSection = () => {
           </div>
         </div>
         <hr className="w-[90%] opacity-10 h-[20px] mx-auto mt-32" />
+      </div> */}
+
+      <div className="mt-10 mb-20 text-center base:w-[90%] xl:w-[50%] mx-auto">
+        <p className="leading-9 pb-10 text-[20px] font-thin">
+          Proton Perpetual is a Delaware-based holding company with a robust
+          portfolio of income-generating real estate assets.
+          <span style={{ color: "#ff5800", fontWeight: "bold" }}>
+            In partnership with Finix196s RWA tokenization platform{" "}
+          </span>
+          , we are transforming how individual investors access and profit from
+          real estate investments through the innovative use of blockchain
+          technology.
+        </p>
       </div>
     </>
   );

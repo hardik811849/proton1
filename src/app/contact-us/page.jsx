@@ -15,7 +15,7 @@ const Contact = () => {
 
       <div className="grid grid-cols-2 w-[90%] mx-auto mt-20 items-center">
         <Image
-          src={"/mail3d4x8-1@2x.png"}
+          src={"/Mail3d@4x-8 1.png"}
           alt="mail"
           width={500}
           height={500}
@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="flex flex-col gap-20">
           <div className="flex items-center gap-10">
             <Image
-              src={"/Group 1321316033.svg"}
+              src={"/Group 1321316079.svg"}
               alt="mail"
               width={500}
               height={500}
@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center gap-10">
             <Image
-              src={"/Group 1321316034.svg"}
+              src={"/Group 1321316080.svg"}
               alt="mail"
               width={500}
               height={500}
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center gap-10">
             <Image
-              src={"/Group 1321316035.svg"}
+              src={"/Group 1321316081.svg"}
               alt="mail"
               width={500}
               height={500}
@@ -65,27 +65,27 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Full Name"
-            className="col-span-2 bg-transparent border-2 border-[#B6BAFE] rounded-full border-opacity-25 p-5 mb-5"
+            className="col-span-2 bg-transparent border-2 border-[#ff5800] rounded-full border-opacity-25 p-5 mb-5"
           />
           <input
             type="email"
             placeholder="Email"
-            className="col-span-1 bg-transparent border-2 border-[#B6BAFE] rounded-full border-opacity-25 p-5 mb-5"
+            className="col-span-1 bg-transparent border-2 border-[#ff5800] rounded-full border-opacity-25 p-5 mb-5"
           />
           <input
             type="number"
             placeholder="Number"
-            className="col-span-1 bg-transparent border-2 border-[#B6BAFE] rounded-full border-opacity-25 p-5 mb-5"
+            className="col-span-1 bg-transparent border-2 border-[#ff5800] rounded-full border-opacity-25 p-5 mb-5"
           />
           <textarea
             type="text"
             placeholder="Enter Your Message"
             rows={5}
-            className="col-span-2 bg-transparent border-2 border-[#B6BAFE] rounded-3xl border-opacity-25 p-5 mb-5"
+            className="col-span-2 bg-transparent border-2 border-[#ff5800] rounded-3xl border-opacity-25 p-5 mb-5"
           />
         </div>
         <div className="flex justify-center mb-20">
-          <button className="w-[200px] mx-auto mt-10 p-5 text-[15px] font-semibold text-white bg-[#B6BAFE] hover:bg-[#434343] rounded-full">
+          <button className="w-[200px] mx-auto mt-10 p-5 text-[15px] font-semibold text-white bg-[#ff5800] hover:bg-[#434343] rounded-full">
             Send Message
           </button>
         </div>

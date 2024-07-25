@@ -1,8 +1,9 @@
 // app/providers.tsx
 "use client";
 
-import { NextUIProvider } from "@nextui-org/system";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "../../theme";
 
 export function Providers({ children }) {
-  return <NextUIProvider>{children}</NextUIProvider>;
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 }
