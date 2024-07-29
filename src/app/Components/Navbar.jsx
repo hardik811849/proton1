@@ -67,14 +67,14 @@ const Navbar = () => {
                 Join Us
               </button>
             </li>
-            {/* <li>
+            <li>
               <button
                 onClick={() => metaMask()}
                 className="bg-[#ff5800] w-32 text-[#fff] rounded-full p-2 text-[15px]"
               >
                 <p>Connect</p>
               </button>
-            </li> */}
+            </li>
           </ul>
           <Menu>
             <MenuButton display={{ base: "block", lg: "none" }}>
