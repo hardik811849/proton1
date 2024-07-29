@@ -35,7 +35,7 @@ const OurProperties = () => {
           }}
           m={"auto"}
         >
-          <TabList
+          {/* <TabList
             m={"auto"}
             overflowY={"hidden"}
             overflowX={{ base: "auto", md: "hidden" }}
@@ -65,7 +65,7 @@ const OurProperties = () => {
                 {category.title}
               </Tab>
             ))}
-          </TabList>
+          </TabList> */}
           {/* <TabIndicator
             mx="auto"
             mt="-1.5px"

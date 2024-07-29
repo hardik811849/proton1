@@ -1,18 +1,16 @@
 import React from "react";
-import lastfm from "@/app/assets/lastfm.svg";
-import delicious from "@/app/assets/delicious.svg";
-import gaming from "@/app/assets/gaming.svg";
-import soundcloud from "@/app/assets/soundcloud.svg";
-import codepen from "@/app/assets/codepen.svg";
-import bitbucket from "@/app/assets/butbucket.svg";
-import hackernews from "@/app/assets/hacker.svg";
-import vk from "@/app/assets/vk.svg";
-import laravel from "@/app/assets/laravel.svg";
-import vue from "@/app/assets/vue.svg";
-import pwa from "@/app/assets/pwa.svg";
-import yahoo from "@/app/assets/yahoo.svg";
+import anchoreg from "@/app/assets/partner/anchoreg.png";
+import avalanche from "@/app/assets/partner/avalanche.png";
+import base from "@/app/assets/partner/base.png";
+import binance from "@/app/assets/partner/binance.png";
+import metamask from "@/app/assets/partner/metamask.svg";
+import polygon from "@/app/assets/partner/polygon.png";
+import solana from "@/app/assets/partner/solana.png";
+import tron from "@/app/assets/partner/tron.png";
+import trustwallet from "@/app/assets/partner/trustwallet.png";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Image from "next/image";
+import { FaEthereum } from "react-icons/fa";
 
 const Partner = () => {
   return (
@@ -50,7 +48,8 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={lastfm} alt="lastfm" width={80} height={80} />
+          <FaEthereum size={80} />
+          {/* <Image src={lastfm} alt="lastfm" width={80} height={80} /> */}
         </GridItem>
         <GridItem
           display={"flex"}
@@ -65,7 +64,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={delicious} alt="lastfm" width={80} height={80} />
+          <Image src={anchoreg} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -80,7 +79,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={gaming} alt="lastfm" width={80} height={80} />
+          <Image src={avalanche} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -95,7 +94,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={soundcloud} alt="lastfm" width={80} height={80} />
+          <Image src={base} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -110,7 +109,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={codepen} alt="lastfm" width={80} height={80} />
+          <Image src={binance} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -125,7 +124,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={bitbucket} alt="lastfm" width={80} height={80} />
+          <Image src={metamask} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -140,7 +139,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={hackernews} alt="lastfm" width={80} height={80} />
+          <Image src={polygon} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -155,7 +154,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={vk} alt="lastfm" width={80} height={80} />
+          <Image src={solana} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -170,7 +169,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={vue} alt="lastfm" width={80} height={80} />
+          <Image src={tron} alt="lastfm" width={80} height={80} />
         </GridItem>
         <GridItem
           display={"flex"}
@@ -185,7 +184,7 @@ const Partner = () => {
             transition: "transform 0.3 ease",
           }}
         >
-          <Image src={lastfm} alt="lastfm" width={80} height={80} />
+          <Image src={trustwallet} alt="lastfm" width={80} height={80} />
         </GridItem>
       </Grid>
 

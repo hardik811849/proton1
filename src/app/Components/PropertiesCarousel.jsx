@@ -299,17 +299,19 @@ const PropertiesCarousel = () => {
       </Box>
       <Box>
         <Box m={"auto"} textAlign={"center"} mt={"50px"} mb={"50px"}>
-          <Button
-            color={"white"}
-            bg={"#ff5800"}
-            mt={"30px"}
-            variant={"outline"}
-            _hover={{ bg: "#ff5800" }}
-            border={"none"}
-            rounded={"full"}
-          >
-            Buy Proton
-          </Button>
+          <Link href={"https://www.finix196.com/site/invest"} target={"_blank"}>
+            <Button
+              color={"white"}
+              bg={"#ff5800"}
+              mt={"30px"}
+              variant={"outline"}
+              _hover={{ bg: "#ff5800" }}
+              border={"none"}
+              rounded={"full"}
+            >
+              Buy Proton
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>

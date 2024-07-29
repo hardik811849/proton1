@@ -1,11 +1,11 @@
-import eve1 from "@/app/assets/eve1.svg";
-import eve2 from "@/app/assets/eve2.svg";
-import eve3 from "@/app/assets/eve3.svg";
-import eve4 from "@/app/assets/eve4.svg";
-import eve5 from "@/app/assets/eve5.svg";
-import eve6 from "@/app/assets/eve6.svg";
-import eve7 from "@/app/assets/eve7.svg";
-import eve8 from "@/app/assets/eve8.svg";
+import eve1 from "@/app/assets/eve1.png";
+import eve2 from "@/app/assets/eve2.png";
+import eve3 from "@/app/assets/eve3.png";
+import eve4 from "@/app/assets/eve4.png";
+import eve5 from "@/app/assets/eve5.png";
+import eve6 from "@/app/assets/eve6.png";
+import eve7 from "@/app/assets/eve7.png";
+import eve8 from "@/app/assets/eve8.png";
 import { Box, Button, Grid, GridItem, Text } from "@chakra-ui/react";
 import { CalendarDays } from "lucide-react";
 import Image from "next/image";
@@ -58,7 +58,7 @@ const Events = () => {
   return (
     <div className="mt-40">
       <h2 className="base:text-[30px] md:text-[50px] font-thin text-center  mt-16 mb-32">
-        Join Our Events
+        Events
       </h2>
 
       <Grid
@@ -115,45 +115,19 @@ const Events = () => {
                 <Text>{event.date}</Text>
               </Box>
             </Box>
-            <Button
+            {/* <Button
               bg={"rgba(255,255,255,0.05)"}
               w={"50%"}
               mt={"30px"}
               variant={"unstyled"}
               rounded={"full"}
               color={"#ff5800"}
-              // isDisabled="true"
-              // _disabled={{
-              //   bg: "rgba(255,255,255,0.5)",
-              //   color: "#ff5800",
-              //   opacity: 0.1, // Adjust the opacity to indicate disabled state
-              //   cursor: "not-allowed",
-              // }}
             >
               Join Event
-            </Button>
+            </Button> */}
           </GridItem>
         ))}
       </Grid>
-
-      {/* <Box m={"auto"} textAlign={"center"} mt={"50px"}>
-        <Button
-          _disabled={{
-            bg: "#ff5800",
-            opacity: 0.1, // Adjust the opacity to indicate disabled state
-            cursor: "not-allowed",
-          }}
-          color={"white"}
-          bg={"#ff5800"}
-          mt={"30px"}
-          variant={"outline"}
-          _hover={{ bg: "#ff5800" }}
-          border={"none"}
-          rounded={"full"}
-        >
-          Explore More
-        </Button>
-      </Box> */}
     </div>
   );
 };

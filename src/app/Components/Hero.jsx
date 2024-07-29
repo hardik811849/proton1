@@ -4,7 +4,7 @@ import eclips from "@/app/assets/Ellipse 1.svg";
 import eclips1 from "@/app/assets/Ellipse 1.svg";
 import dot from "@/app/assets/dot.svg";
 import dot1 from "@/app/assets/dot1.svg";
-import proton_bubble from "@/app/assets/Proton bubble1.svg";
+import proton_bubble from "@/app/assets/Proton bubble2.svg";
 import token1 from "@/app/assets/token-1.svg";
 import token2 from "@/app/assets/token-2.svg";
 import token3 from "@/app/assets/token-3.svg";

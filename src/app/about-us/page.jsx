@@ -1,21 +1,11 @@
-import React from "react";
-import bg_about from "@/app/assets/Frame.svg";
-import Image from "next/image";
-import eclips from "@/app/assets/Ellipse 27.svg";
-import spear from "@/app/assets/sphere@4x-8 1.png";
-import shld from "@/app/assets/shld@4x-8 1.png";
 import blocks from "@/app/assets/blocks.png";
-import Partner from "../Components/Partner";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import team1 from "@/app/assets/team2.svg";
-import team2 from "@/app/assets/team3.svg";
-import team3 from "@/app/assets/team4.svg";
-import team4 from "@/app/assets/team5.svg";
+import eclips from "@/app/assets/Ellipse 27.svg";
+import bg_about from "@/app/assets/Frame.svg";
+import shld from "@/app/assets/shld@4x-8 1.png";
+import spear from "@/app/assets/sphere@4x-8 1.png";
+import Image from "next/image";
 import Faqs from "../Components/Faqs";
+import Partner from "../Components/Partner";
 
 const Aboutus = () => {
   return (
@@ -33,7 +23,7 @@ const Aboutus = () => {
           alt="bg_about"
           width={500}
           height={500}
-          className="mx-auto w-[40%] mix-blend-hard-light object-cover"
+          className="mx-auto w-[40%] mix-blend-screen object-cover"
         />
         <div className="w-full h-[80%] absolute top-[5%] bg-gradient-to-t from-[#000000] via-[rgba(0,0,0,0.6)] to-[rgba(16,18,34,0)]"></div>
         <h1 className="text-[130px] font-thin text-center relative -top-[30rem]">

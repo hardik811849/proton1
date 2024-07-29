@@ -40,7 +40,7 @@ const Contact = () => {
               height={500}
               className="w-[10%]"
             />
-            <p>contact@technocraft.ca</p>
+            <p>contact@realproton.com, </p>
           </div>
           <div className="flex items-center gap-10">
             <Image
@@ -51,8 +51,7 @@ const Contact = () => {
               className="w-[10%]"
             />
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable{" "}
+              2150 Town Square Pl, <br /> Ste. 200 Sugar Land, Texas 77479
             </p>
           </div>
         </div>

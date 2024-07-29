@@ -2,13 +2,14 @@
 import React, { useEffect, useRef } from "react";
 import spear from "@/app/assets/spehear.svg";
 import Image from "next/image";
-import protonP from "@/app/assets/protopP1.png";
+import protonP from "@/app/assets/key.svg";
 import money from "@/app/assets/money 1.png";
 import secure from "@/app/assets/secure 1.png";
 import dollar from "@/app/assets/dollar 1.png";
 import decentralised from "@/app/assets/decentralised 1.png";
 import resize from "@/app/assets/resize 1.png";
 import small_talk from "@/app/assets/small-talk 1.png";
+import Link from "next/link";
 
 const KeyFeatures = () => {
   const spearRef = useRef(null);
@@ -35,19 +36,23 @@ const KeyFeatures = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="relative pb-20 -mt-14" id="keyFeature ">
+    <div className="relative pb-20 -mt-14" id="proton_token">
       <div className="grid lg:grid-cols-1 xl:grid-cols-4 items-center  lg:w-[100%] xl:w-[85%] 2xl:w-[90%] mx-auto lg:gap-1 xl:gap-2 2xl:gap-10">
         <div className="lg:col-span-2 base:w-[90%] md:w-[90%] lg:w-[90%] mx-auto p-10">
-          <h2 className="font-thin text-[60px]">Proton Token</h2>
+          <h2 className="font-thin base:text-[40px] md:text-[60px]">
+            Proton Token
+          </h2>
           <p className="font-thin text-[15px] base:leading-8 lg:leading-9 pb-10 lg:w-[90%] xl:w-[70%]">
             Proton- A highly secure, transparent, and revenue generating
             security token, unleashing all the erstwhile boundaries of liquidity
             and returns, is launched in the U.S. with one-of-it’s kind features
             and benefits, for both asset owners and investors
           </p>
-          <button className="bg-[#FF5800] text-[#101222] rounded-full p-2 text-[15px] font-medium w-36 ">
-            About Us
-          </button>
+          <Link href="/about-us">
+            <button className="bg-[#FF5800] text-[#ffff] rounded-full p-2 text-[15px] font-medium w-36 ">
+              About Us
+            </button>
+          </Link>
         </div>
         <div className="lg:col-span-1 xl:col-span-2 base:w-[90%] md:w-[90%] lg:w-[90%] relative">
           <div className="relative  md:w-[26rem] md:h-[30rem] lg:w-[35rem] lg:h-[35rem] mx-auto ">
@@ -123,7 +128,7 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">
+                <p className="font-medium text-[15px] w-[100%]">
                   Institutional grade
                 </p>
               </div>
@@ -135,7 +140,9 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">Interoperable</p>
+                <p className="font-medium text-[15px] w-[100%]">
+                  Interoperable
+                </p>
               </div>
               <div className="absolute md:top-[45%] md:-left-32 lg:top-[45%] lg:-left-40 xl:top-[45%] xl:-left-48 2xl:top-[45%] -left-48 flex items-center gap-4 border-2 border-zinc-700 bg-[#101011] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
@@ -145,7 +152,7 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">Multi ATS</p>
+                <p className="font-medium text-[15px] w-[100%]">Multi ATS</p>
               </div>
               <div className="absolute md:top-[45%] md:left-[22rem] lg:top-[45%] lg:left-[27rem] xl:top-[45%] xl:left-[27rem] 2xl:top-[45%] left-[90%] flex items-center gap-4 border-2 border-zinc-700 bg-[#101011] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
@@ -155,7 +162,7 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">8% yield</p>
+                <p className="font-medium text-[15px] w-[100%]">8% yield</p>
               </div>
               <div className="absolute md:top-[75%] md:-left-10 lg:top-[75%] lg:-left-36 top-[75%] -left-36 flex items-center gap-4 border-2 border-zinc-700 bg-[#101011] rounded-full p-5 md:w-[50%] lg:w-[45%]">
                 <Image
@@ -165,7 +172,7 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">
+                <p className="font-medium text-[15px] w-[100%]">
                   Multi-Chain Support
                 </p>
               </div>
@@ -177,7 +184,7 @@ const KeyFeatures = () => {
                   height={500}
                   className="w-[20%] "
                 />
-                <p className="font-thin text-[15px] w-[100%]">
+                <p className="font-medium text-[15px] w-[100%]">
                   Curated Portfolio
                 </p>
               </div>

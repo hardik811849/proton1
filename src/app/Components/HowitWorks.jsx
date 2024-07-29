@@ -24,7 +24,7 @@ const categories = [
 
 const HowitWorks = () => {
   return (
-    <div>
+    <div id="how_it_works">
       <h2 className="base:text-[30px] md:text-[50px] font-thin text-center  mt-16 mb-32">
         How it Works
       </h2>
@@ -110,6 +110,37 @@ const HowitWorks = () => {
             </TabPanel>
             <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
               <Text mb={6} fontWeight={"thin"}>
+                Proton Perpetual is a tokenized holding company with a robust
+                real estate portfolio, offering investors an opportunity to
+                explore and initiate an investment. By visiting the Proton
+                Perpetual website, investors can discover the advantages of this
+                unique investment opportunity. To invest, simply click the
+                Invest Now button, which will seamlessly redirect you to Proton
+                Perpetuals ATS (Alternative Trading System) partner, a SEC and
+                FINRA-licensed platform.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The registration process involves completing the onboarding
+                steps provided by the ATS partner, allowing you to set up and
+                activate your account. As part of the compliance and
+                verification procedures, you will need to fulfill the necessary
+                Know Your Customer (KYC) and Anti-Money Laundering (AML)
+                requirements to authenticate your identity and investment
+                eligibility. Once the verification process is complete, you will
+                be whitelisted as an approved investor, enabling you to
+                participate in Proton Perpetuals offerings through the ATS
+                platform.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                With the whitelisting process finalized, you are now ready to
+                engage in the investment opportunity. Both Proton Perpetual and
+                the ATS partner are committed to providing ongoing assistance
+                throughout your investment journey, ensuring a seamless and
+                secure experience.
+              </Text>
+            </TabPanel>
+            <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
+              <Text mb={6} fontWeight={"thin"}>
                 Proton Perpetuals portfolio is a strategically curated
                 collection of high-value real estate assets, structured as
                 tokenized company stock. Each Proton token represents a
@@ -144,11 +175,7 @@ const HowitWorks = () => {
                 their investment positions as needed.
               </Text>
             </TabPanel>
-            <TabPanel
-              bg={"rgba(255,255,255,0.05)"}
-              rounded={"xl"}
-              p={10}
-            ></TabPanel>
+
             <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
               <Text mb={6} fontWeight={"thin"}>
                 Protons tokenization process is meticulously designed to ensure
@@ -187,11 +214,38 @@ const HowitWorks = () => {
                 tokens.
               </Text>
             </TabPanel>
-            <TabPanel
-              bg={"rgba(255,255,255,0.05)"}
-              rounded={"xl"}
-              p={10}
-            ></TabPanel>
+            <TabPanel bg={"rgba(255,255,255,0.05)"} rounded={"xl"} p={10}>
+              <Text mb={6} fontWeight={"thin"}>
+                The Proton Auction Platform offers a straightforward process for
+                bidding on Proton tokens. To get started, you will need to first
+                register and complete the necessary KYC (Know Your Customer)
+                requirements to activate your account.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                The auctions run on a weekly schedule, with daily auctions on
+                weekdays and special Super Rounds on weekends. To participate,
+                simply log in and place your bids on the available tokens during
+                the weekday auctions. Keep an eye on token availability and
+                oversubscription levels, as these can impact potential bonuses.
+                The Super Rounds on weekends provide an opportunity to bid on
+                protocol tokens with lucrative bonus incentives, so be sure to
+                participate in these as well.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                When placing your bids, remember to adhere to the auction rules.
+                Bids must be submitted during the scheduled auction times, and
+                you will need to stay within any set minimum and maximum bid
+                limits. Additionally, familiarize yourself with the criteria for
+                earning bonuses, as these can enhance your returns.
+              </Text>
+              <Text mb={6} fontWeight={"thin"}>
+                After the auction ends, the results will be posted on the
+                platform, and your successfully acquired tokens will be
+                distributed to your Custody wallet. By following this
+                step-by-step guide, you will be well on your way to
+                participating in the Proton token auctions.
+              </Text>
+            </TabPanel>
             {/* ))} */}
           </TabPanels>
         </Tabs>

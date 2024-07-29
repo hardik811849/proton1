@@ -19,12 +19,7 @@ import React, { useEffect, useRef } from "react";
 const categories = [
   { id: 1, title: "General Questions", key: "GeneralQuestions" },
   { id: 2, title: "Legal", key: "LegalQuestions" },
-  // {
-  //   id: 3,
-  //   title: "Proton Perpetual Marketplace",
-  //   key: "ProtonPerpetualMarketplace",
-  // },
-  { id: 4, title: "Troubleshooting", key: "Troubleshooting" },
+  { id: 3, title: "Troubleshooting", key: "Troubleshooting" },
 ];
 
 const faqData = {
@@ -32,7 +27,7 @@ const faqData = {
     1: {
       question: "What is Proton Token?",
       answer:
-        "Proton Token is a digital security token on the blockchain that represents fractional ownership in a portfolio of revenue-generating real estate, managed by Proton Perpetual, a Delaware-based company.",
+        "Proton Token is a digital security token on the blockchain that represents fractional ownership in Proton perpetual where a portfolio of revenue-generating real estate is managed by Proton Perpetual, a Delaware-based company.",
     },
     2: {
       question: "How can I purchase Proton Tokens?",
@@ -60,7 +55,7 @@ const faqData = {
     2: {
       question: "Can I tokenize my real estate property with Proton Token?",
       answer:
-        "While current tokens are linked to properties already in the Proton Perpetual portfolio, future offerings may include options for investors to tokenize their own properties.",
+        "While current tokens are linked to Proton Perpetual Company , future offerings may include options for investors to tokenize their own properties.",
     },
     3: {
       question: "Are there any legal restrictions on selling Proton Tokens?",
@@ -101,7 +96,7 @@ const faqData = {
     1: {
       question: "What should I do if I encounter an issue with a transaction?",
       answer:
-        "If you experience a problem with a transaction on the Proton Perpetual platform or Proton Perpetual Marketplace, contact customer support immediately with details of the transaction for assistance.",
+        "If you experience a problem with a transaction on the Proton Perpetual platform contact customer support immediately with details of the transaction for assistance.",
     },
     2: {
       question: "How can I recover my account if I lose access?",

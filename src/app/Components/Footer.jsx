@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@/app/assets/navbar/logo1.svg";
+import logo from "@/app/assets/navbar/Proton_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -8,7 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { BsReddit } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import gray_logo from "@/app/assets/gray_logo1.svg";
+import gray_logo from "@/app/assets/gray_logo2.svg";
+import { US, GB, AE, HK, SG, IN } from "country-flag-icons/react/3x2";
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
               alt="logo"
               width={40}
               height={40}
-              className="base:w-[100%] md:w-[30%] lg:w-[30%] xl:w-[30%] "
+              className="base:w-[100%] md:w-[30%] lg:w-[70%] xl:w-[70%] "
             />
             <div className="flex gap-4 mt-4">
               <FaLinkedin size={36} />
@@ -46,26 +47,29 @@ const Footer = () => {
         </div>
         <hr className="mt-12 text-zinc-600 opacity-10 w-full" />
 
-        <div className="grid base:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 mt-16">
-          <div className="leading-10">
+        <div className="grid base:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 gap-6 mt-16">
+          {/* <div className="leading-10">
             <h2 className="text-[23px] font-medium">Learn</h2>
             <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Face value simulation</Link>
-              <Link href={"#"}>How it Works</Link>
+              <Link href={"/how-it-works"}>How it Works</Link>
               <Link href={"/how-to-invest"}>How to Invest</Link>
               <Link href={"#"}>Bounus ranking</Link>
             </div>
-          </div>
+          </div> */}
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Our solutions</h2>
-            <div className="opacity-55 font-thin flex flex-col">
+            <div className="opacity-55 font-medium flex flex-col">
               <Link href={"#"}>Proton</Link>
               <Link href={"#"}>Auctions</Link>
-              <Link href={"#"}>Network staking</Link>
-              <Link href={"#"}>Get whitelisted</Link>
+              <Link href={"#"}>Portfolio</Link>
+              <Link href={"#"}>Interoperability Protocol</Link>
+              <Link href={"#"}>Multi-ATS support</Link>
+              <Link href={"#"}>Multi-Chain Support</Link>
+              <Link href={"#"}>Multi-Standard Support</Link>
             </div>
           </div>
-          <div className="leading-10">
+          {/* <div className="leading-10">
             <h2 className="text-[23px] font-medium">Library</h2>
             <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Github</Link>
@@ -74,16 +78,22 @@ const Footer = () => {
               <Link href={"#"}>pitch deck</Link>
               <Link href={"#"}>one pager</Link>
             </div>
-          </div>
+          </div> */}
           <div className="leading-10">
-            <h2 className="text-[23px] font-medium">Liquidity 24/7</h2>
-            <div className="opacity-55 font-thin flex flex-col">
-              <Link href={"#"}>Liquidity </Link>
-              <Link href={"#"}>Exchanges</Link>
+            <h2 className="text-[23px] font-medium">Resources</h2>
+            <div className="opacity-55 font-medium flex flex-col">
+              <Link href={"#"}>Oracles </Link>
+              <Link href={"#"}>Investing</Link>
+              <Link href={"#"}>Tokenization</Link>
+              <Link href={"/how-it-works"}>How it Works</Link>
+              <Link href={"/how-to-invest"}>How to Invest </Link>
+              <Link href={"#"}>Develover Docs </Link>
+              <Link href={"#"}>Technical Architecture </Link>
               <Link href={"#"}>Alternative Trading System</Link>
+              <Link href={"#"}>Token Price and Profitability</Link>
             </div>
           </div>
-          <div className="leading-10">
+          {/* <div className="leading-10">
             <h2 className="text-[23px] font-medium">Community</h2>
             <div className="opacity-55 font-thin flex flex-col">
               <Link href={"#"}>Telegram</Link>
@@ -95,10 +105,10 @@ const Footer = () => {
               <Link href={"#"}>Medium</Link>
               <Link href={"#"}>Events</Link>
             </div>
-          </div>
+          </div> */}
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">About</h2>
-            <div className="opacity-55 font-thin">
+            <div className="opacity-55 font-medium">
               <Link href={"/about-us"}>About us</Link> <br />
               <Link href={"#"}>Our Team</Link> <br />
               <Link href={"#"}>Vision</Link> <br />
@@ -111,11 +121,42 @@ const Footer = () => {
           </div>
           <div className="leading-10">
             <h2 className="text-[23px] font-medium">Help</h2>
-            <div className="opacity-55 font-thin">
+            <div className="opacity-55 font-medium">
               <Link href={"#"}>Reports</Link> <br />
               <Link href={"/contact-us"}>Contact Us</Link> <br />
               <Link href={"#"}>Help centre</Link> <br />
               <Link href={"#"}>Announcements</Link> <br />
+            </div>
+          </div>
+          <div className="base:col-span-1 md:col-span-2 ">
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <US title="United States" className="w-[70px]" />
+              <p>
+                2150 Town Square Pl, <br /> Ste. 200 Sugar Land, Texas 77479
+              </p>
+            </div>
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <GB title="United States" className="w-[70px]" />
+              <p>Canary Wharf London (UK)</p>
+            </div>
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <AE title="United States" className="w-[70px]" />
+              <p>DMCC free zone Dubai (UAE)</p>
+            </div>
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <IN title="United States" className="w-[70px]" />
+              <p>
+                807, Shivalik Shilp, Isckon Cross Road, <br /> Ahmedabad,
+                Gujarat, India, 380015
+              </p>
+            </div>
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <HK title="United States" className="w-[70px]" />
+              <p>Kwun Tong, Hong Kong</p>
+            </div>
+            <div className="flex gap-7 items-center font-medium mb-4">
+              <SG title="United States" className="w-[70px]" />
+              <p>Shenton way, Singapore</p>
             </div>
           </div>
         </div>
@@ -127,7 +168,7 @@ const Footer = () => {
             alt="logo"
             width={100}
             height={100}
-            className="w-[20%] text-center"
+            className="w-[20%] text-center opacity-5"
           />
           <p className="opacity-50 mt-4 font-thin">
             It is a long established fact that a reader{" "}

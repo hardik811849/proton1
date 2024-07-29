@@ -13,19 +13,21 @@ import PressUs from "./Components/PressUs";
 import Faqs from "./Components/Faqs";
 import Graph from "./Components/Graph";
 import HowitWorks from "./Components/HowitWorks";
+import TytpeAnimationLine from "./Components/TytpeAnimationLine";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Calculate />
-      <AboutSection />
-      <Graph />
+      <TytpeAnimationLine />
+      {/* <Calculate /> */}
+      {/* <AboutSection /> */}
+      {/* <Graph /> */}
       <KeyFeatures />
       <OurProperties />
       <Benifit />
       <HowitWorks />
-      <Roadmap />
+      {/* <Roadmap /> */}
       <Partner />
       <Events />
       <PressUs />
