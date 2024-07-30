@@ -25,14 +25,11 @@ const Navbar = () => {
     window.ethereum.on("chainChanged", () => window.location.reload());
   }
 
-  const metaMask = async () => {
-    try {
-      if (!address) {
-        await open();
-      }
-    } catch (error) {
-      console.error("Error opening Web3Modal:", error);
+  const metaMask = () => {
+    if (!address) {
+      open();
     }
+    console.log("Hii");
   };
 
   const handleMenuItemClick = (id) => {
