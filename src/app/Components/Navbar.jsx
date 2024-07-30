@@ -28,11 +28,11 @@ const Navbar = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.ethereum) {
-      window.ethereum.on("accountsChanged", async (_) => {
+      window.ethereum.on("accountsChanged", async () => {
         window.location.reload();
         await getAccountDetails();
       });
-      window.ethereum.on("chainChanged", (_) => window.location.reload());
+      window.ethereum.on("chainChanged", () => window.location.reload());
     }
   }, [address]);
 
@@ -140,7 +140,7 @@ const Navbar = () => {
             </>
             <li>
               <button
-                onClick={() => metaMask()}
+                onClick={metaMask}
                 className="bg-[#ff5800] w-50 text-[#fff] rounded-full p-2 text-[15px]"
               >
                 <p>{address ? "connected" : "Connect"}</p>
