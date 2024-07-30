@@ -34,12 +34,13 @@ const Navbar = () => {
       });
       window.ethereum.on("chainChanged", (_) => window.location.reload());
     }
-  }, []);
+  }, [address]);
 
   const metaMask = () => {
     if (!address) {
       open();
     }
+    console.log("Hii");
   };
 
   const handleMenuItemClick = (id) => {
