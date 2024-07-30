@@ -1,17 +1,38 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
-import logo from "@/app/assets/navbar/Logo5.svg";
+import React, { useEffect, useState } from "react";
+import logo from "@/app/assets/navbar/logo1.svg";
 import Link from "next/link";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+import { MdOutlineContentCopy } from "react-icons/md";
+import { Tooltip } from "@chakra-ui/react";
 
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useAccount } from "wagmi";
 import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { getAccountDetails } from "../blockchain/commonFunction";
 
 const Navbar = () => {
   const { open } = useWeb3Modal();
   const { address } = useAccount();
+  const [copyStatus, setCopyStatus] = useState(false);
+
+  if (window.ethereum) {
+    window.ethereum.on("accountsChanged", async (_) => {
+      window.location.reload();
+      await getAccountDetails();
+    });
+    window.ethereum.on("chainChanged", (_) => window.location.reload());
+  }
 
   const metaMask = () => {
     if (address === undefined) {
@@ -24,6 +45,22 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  };
+
+  // const copyAddress = () => {
+  //   if (!navigator.clipboard) {
+  //     return;
+  //   }
+  //   setCopyStatus(true);
+  //   navigator.clipboard.writeText(address);
+  // };
+
+  const copyAddress = () => {
+    if (!navigator.clipboard) {
+      return;
+    }
+    setCopyStatus(true);
+    navigator.clipboard.writeText(address);
   };
 
   return (
@@ -39,7 +76,7 @@ const Navbar = () => {
               className="w-[100%]"
             />
           </Link>
-          <ul className="xl:w-[50%] 2xl:w-[40%]  hidden lg:flex  gap-9 items-center justify-center border-2 border-gray-700 p-2 px-4 rounded-full">
+          <ul className="xl:w-[75%] 2xl:w-[60%]  hidden lg:flex  gap-9 items-center justify-center border-2 border-gray-700 p-2 px-4 rounded-full">
             {/* <li
               className=" font-thin"
               onClick={() => handleMenuItemClick("keyFeature")}
@@ -62,21 +99,52 @@ const Navbar = () => {
               How it Works
             </li>
 
+            <li className=" font-thin">
+              <Link href="/">Roadmap</Link>
+            </li>
             <li>
               <button className="bg-[#ff5800] w-32 text-[#fff] rounded-full p-2 text-[15px]">
                 Join Us
               </button>
             </li>
+            <>
+              {address && (
+                <li className=" font-thin flex align-middle cursor-pointer ">
+                  <>
+                    <h2 className="opacity-50 text-[25px] font-normal">
+                      {address && address.substring(0, 4)}
+                      ....
+                      {address && address.substring(address.length - 4)}
+                    </h2>
+                    <Tooltip
+                      fontSize="lg"
+                      label={copyStatus ? "copied" : "copy"}
+                    >
+                      <div
+                        onClick={copyAddress}
+                        onMouseMove={() => setCopyStatus(false)}
+                        className="p-2"
+                      >
+                        <MdOutlineContentCopy
+                          size={20}
+                          className="flex text-[14px] align-middle"
+                        />
+                      </div>
+                    </Tooltip>
+                  </>
+                </li>
+              )}
+            </>
             <li>
               <button
                 onClick={() => metaMask()}
-                className="bg-[#ff5800] w-32 text-[#fff] rounded-full p-2 text-[15px]"
+                className="bg-[#ff5800] w-50 text-[#fff] rounded-full p-2 text-[15px]"
               >
-                <p>Connect</p>
+                <p>{address ? "connected" : "Connect"}</p>
               </button>
             </li>
           </ul>
-          {/* <Menu>
+          <Menu>
             <MenuButton display={{ base: "block", lg: "none" }}>
               <HamburgerIcon boxSize={6} />
             </MenuButton>
@@ -90,7 +158,7 @@ const Navbar = () => {
                 </Button>
               </MenuItem>
             </MenuList>
-          </Menu> */}
+          </Menu>
         </nav>
       </header>
     </>

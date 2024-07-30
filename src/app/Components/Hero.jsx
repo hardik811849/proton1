@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import eclips from "@/app/assets/Ellipse 1.svg";
 import eclips1 from "@/app/assets/Ellipse 1.svg";
 import dot from "@/app/assets/dot.svg";
@@ -10,7 +11,7 @@ import token2 from "@/app/assets/token-2.svg";
 import token3 from "@/app/assets/token-3.svg";
 import token4 from "@/app/assets/token-4.svg";
 import Link from "next/link";
-
+import Particles from "@/components/magicui/particles";
 const Hero = () => {
   return (
     <>
@@ -27,7 +28,7 @@ const Hero = () => {
         alt="dot"
         width={500}
         height={500}
-        className="absolute -top-16 sm:left-0 md:left-32 -rotate-6 w-[80%] mix-blend-color-dodge  -z-10"
+        className="absolute -top-16 sm:left-0 md:left-32 -rotate-6 w-[80%] mix-blend-color-dodge  -z-50"
       />
       <Image
         src={dot1}
@@ -36,7 +37,6 @@ const Hero = () => {
         height={500}
         className="absolute top-96 left-10 -rotate-6 w-[80%] opacity-25 mix-blend-color-dodge -z-50"
       />
-      <div className=""></div>
 
       <div className="relative  flex justify-center gap-16 items-center p-10 pt-20">
         {/* <Image
@@ -128,6 +128,16 @@ const Hero = () => {
           </Link> */}
         </div>
       </div>
+      {/* <div className="border-2"> */}
+      {/* <Particles
+          className="absolute inset-0"
+          quantity={10000}
+          ease={80}
+          color={"#fff"}
+          refresh
+          vy={"75vh"}
+        /> */}
+      {/* </div> */}
     </>
   );
 };

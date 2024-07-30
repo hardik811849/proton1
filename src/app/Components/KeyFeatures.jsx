@@ -50,7 +50,7 @@ const KeyFeatures = () => {
           </p>
           <Link href="/about-us">
             <button className="bg-[#FF5800] text-[#ffff] rounded-full p-2 text-[15px] font-medium w-36 ">
-              About Us
+              Download IM
             </button>
           </Link>
         </div>

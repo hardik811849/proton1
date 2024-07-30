@@ -96,7 +96,6 @@ const getProtonCalulate = async (value) => {
     let getAmount = await readFunction.calculateTokenAmount(value);
     const amnt = Number(getAmount);
     // const val = ethers.parseUnits(amnt.toString(), 18);
-    console.log(typeof amnt, "proton value-->", amnt);
     return amnt.toString();
   } catch (err) {
     console.log(err);
@@ -127,9 +126,31 @@ const checkBalance = async () => {
   try {
     const readFunction = await readContractFunction("usdt");
     const checkBal = await readFunction.balanceOf(
-      "0xaF5Cb16484c7920A453418dC89720A2C599BFD2B"
+      "0xd5CD568B40A4c7Fec82eC88F9D93B6455Cc03fa2"
     );
     return checkBal;
+  } catch (error) {
+    console.log(error);
+  }
+};
+const checkTodayBalance = async () => {
+  try {
+    const readFunction = await readContractFunction("ProtonAuction");
+    const getCurrentDay = await readFunction.getCurrentDay();
+    const checkBal = await readFunction.getDailyAuction(getCurrentDay);
+    const fixVal = Number(ethers.formatEther(checkBal[1]));
+    return fixVal.toFixed(2);
+  } catch (error) {
+    console.log(error);
+  }
+};
+const checkBalanceProton = async (add) => {
+  let { address } = getAccount();
+  try {
+    const readFunction = await readContractFunction("protonToken");
+    const checkBal = await readFunction.balanceOf(address);
+    const Val = Number(ethers.formatEther(checkBal));
+    return Val.toFixed(2);
   } catch (error) {
     console.log(error);
   }
@@ -145,4 +166,6 @@ export {
   investNow,
   checkBalance,
   getProtonCalulate,
+  checkTodayBalance,
+  checkBalanceProton,
 };

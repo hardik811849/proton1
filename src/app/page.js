@@ -14,13 +14,22 @@ import Faqs from "./Components/Faqs";
 import Graph from "./Components/Graph";
 import HowitWorks from "./Components/HowitWorks";
 import TytpeAnimationLine from "./Components/TytpeAnimationLine";
+import Particles from "@/components/magicui/particles";
 
 export default function Home() {
   return (
     <>
+      <Particles
+        size={0.8}
+        className="absolute -inset-20 h-[8244px] w-full -z-10 !important"
+        quantity={1000}
+        ease={100}
+        color={"#fff"}
+        refresh
+      />
       <Hero />
       <TytpeAnimationLine />
-      {/* <Calculate /> */}
+      <Calculate />
       {/* <AboutSection /> */}
       {/* <Graph /> */}
       <KeyFeatures />

@@ -178,3 +178,17 @@ body {
   font-size: 44px; /* Increase arrow icon size */
   color: #ff5800; /* Arrow color */
 }
+/* animations.css */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+/* HTML: <div class="triangle"></div> */

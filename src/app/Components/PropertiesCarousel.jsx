@@ -66,9 +66,6 @@ const PropertiesCarousel = () => {
             p={5}
             mr={2}
           >
-            <Text textAlign={"center"} opacity={0.5} mb={2}>
-              Rented Since Mar13, 2024
-            </Text>
             <Image
               src={pro1}
               alt="pro1"
@@ -76,6 +73,9 @@ const PropertiesCarousel = () => {
               height={300}
               className="w-full"
             />
+            <Text textAlign={"center"} mt={2}>
+              Residential Leased Property
+            </Text>
             <Box
               mt={"17px"}
               display={"flex"}
@@ -85,9 +85,8 @@ const PropertiesCarousel = () => {
             >
               <Stack textAlign={"center"}>
                 <Text fontSize={"20px"} opacity={0.5}>
-                  Saffron Apartments
+                  Saffron Appartments
                 </Text>
-                <Text fontSize={"20px"}>$10,00,000</Text>
               </Stack>
               <Box
                 w={{
@@ -108,13 +107,19 @@ const PropertiesCarousel = () => {
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Annual Rental Return
                 </Text>
-                <Text>10%</Text>
+                <Text>18%</Text>
               </Box>
               <Box display={"flex"} justifyContent={"space-between"} mt={5}>
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Projected Value Growth
                 </Text>
-                <Text>12%</Text>
+                <Text>15%</Text>
+              </Box>
+              <Box display={"flex"} justifyContent={"space-between"} mt={5}>
+                <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
+                  Leased since
+                </Text>
+                <Text>April, 2022</Text>
               </Box>
             </Box>
           </Box>
@@ -124,10 +129,8 @@ const PropertiesCarousel = () => {
             fontSize={"17px"}
             fontWeight={"semibold"}
             p={5}
+            mr={2}
           >
-            <Text textAlign={"center"} opacity={0.5} mb={2}>
-              Rented Since Mar13, 2024
-            </Text>
             <Image
               src={pro3}
               alt="pro1"
@@ -135,6 +138,9 @@ const PropertiesCarousel = () => {
               height={300}
               className="w-full"
             />
+            <Text textAlign={"center"} mt={2}>
+              Yield Bearing Hotel
+            </Text>
             <Box
               mt={"17px"}
               display={"flex"}
@@ -144,9 +150,8 @@ const PropertiesCarousel = () => {
             >
               <Stack textAlign={"center"}>
                 <Text fontSize={"20px"} opacity={0.5}>
-                  Saffron Apartments
+                  Linking Park Motels
                 </Text>
-                <Text fontSize={"20px"}>$10,00,000</Text>
               </Stack>
               <Box
                 w={{
@@ -159,7 +164,7 @@ const PropertiesCarousel = () => {
                 p={"20px"}
                 rounded={"md"}
               >
-                2nd of 4 properties
+                2nd of 4 Properties
               </Box>
             </Box>
             <Box>
@@ -167,13 +172,19 @@ const PropertiesCarousel = () => {
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Annual Rental Return
                 </Text>
-                <Text>10%</Text>
+                <Text>21%</Text>
               </Box>
               <Box display={"flex"} justifyContent={"space-between"} mt={5}>
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Projected Value Growth
                 </Text>
                 <Text>12%</Text>
+              </Box>
+              <Box display={"flex"} justifyContent={"space-between"} mt={5}>
+                <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
+                  Operational since
+                </Text>
+                <Text>September, 2021</Text>
               </Box>
             </Box>
           </Box>
@@ -183,10 +194,8 @@ const PropertiesCarousel = () => {
             fontSize={"17px"}
             fontWeight={"semibold"}
             p={5}
+            mr={2}
           >
-            <Text textAlign={"center"} opacity={0.5} mb={2}>
-              Rented Since Mar13, 2024
-            </Text>
             <Image
               src={pro1}
               alt="pro1"
@@ -194,18 +203,20 @@ const PropertiesCarousel = () => {
               height={300}
               className="w-full"
             />
+            <Text textAlign={"center"} mt={2}>
+              Commercials Retail Building on Lease
+            </Text>
             <Box
               mt={"17px"}
               display={"flex"}
-              alignItems={"center"}
               flexDirection={{ base: "column", lg: "row", "2xl": "row" }}
+              alignItems={"center"}
               justifyContent={"space-between"}
             >
               <Stack textAlign={"center"}>
                 <Text fontSize={"20px"} opacity={0.5}>
-                  Saffron Apartments
+                  Crown Towers
                 </Text>
-                <Text fontSize={"20px"}>$10,00,000</Text>
               </Stack>
               <Box
                 w={{
@@ -218,7 +229,7 @@ const PropertiesCarousel = () => {
                 p={"20px"}
                 rounded={"md"}
               >
-                3rd of 4 properties
+                3rd of 4 Properties
               </Box>
             </Box>
             <Box>
@@ -226,13 +237,19 @@ const PropertiesCarousel = () => {
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Annual Rental Return
                 </Text>
-                <Text>10%</Text>
+                <Text>16%</Text>
               </Box>
               <Box display={"flex"} justifyContent={"space-between"} mt={5}>
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Projected Value Growth
                 </Text>
-                <Text>12%</Text>
+                <Text>18%</Text>
+              </Box>
+              <Box display={"flex"} justifyContent={"space-between"} mt={5}>
+                <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
+                  Leased since
+                </Text>
+                <Text>January, 2018</Text>
               </Box>
             </Box>
           </Box>
@@ -242,29 +259,29 @@ const PropertiesCarousel = () => {
             fontSize={"17px"}
             fontWeight={"semibold"}
             p={5}
+            mr={2}
           >
-            <Text textAlign={"center"} opacity={0.5} mb={2}>
-              Rented Since Mar13, 2024
-            </Text>
             <Image
-              src={pro3}
+              src={pro1}
               alt="pro1"
               width={300}
               height={300}
               className="w-full"
             />
+            <Text textAlign={"center"} mt={2}>
+              Residential Leased Property
+            </Text>
             <Box
               mt={"17px"}
               display={"flex"}
-              alignItems={"center"}
               flexDirection={{ base: "column", lg: "row", "2xl": "row" }}
+              alignItems={"center"}
               justifyContent={"space-between"}
             >
               <Stack textAlign={"center"}>
                 <Text fontSize={"20px"} opacity={0.5}>
-                  Saffron Apartments
+                  Hemingway Appartments
                 </Text>
-                <Text fontSize={"20px"}>$10,00,000</Text>
               </Stack>
               <Box
                 w={{
@@ -277,7 +294,7 @@ const PropertiesCarousel = () => {
                 p={"20px"}
                 rounded={"md"}
               >
-                4th of 4 properties
+                4th of 4 Properties
               </Box>
             </Box>
             <Box>
@@ -285,13 +302,19 @@ const PropertiesCarousel = () => {
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Annual Rental Return
                 </Text>
-                <Text>10%</Text>
+                <Text>25%</Text>
               </Box>
               <Box display={"flex"} justifyContent={"space-between"} mt={5}>
                 <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
                   Projected Value Growth
                 </Text>
-                <Text>12%</Text>
+                <Text>20%</Text>
+              </Box>
+              <Box display={"flex"} justifyContent={"space-between"} mt={5}>
+                <Text fontSize={"26px"} opacity={0.5} fontWeight={"thin"}>
+                  Leased since
+                </Text>
+                <Text>July, 2023</Text>
               </Box>
             </Box>
           </Box>

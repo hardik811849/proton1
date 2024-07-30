@@ -1,20 +1,40 @@
 "use client";
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  AlertDialogCloseButton,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaEthereum } from "react-icons/fa";
 import {
   checkBalance,
+  checkBalanceProton,
+  checkTodayBalance,
   getProtonCalulate,
   investNow,
 } from "../blockchain/commonFunction";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Link from "next/link";
 import { ethers } from "ethers";
+import { getAccount } from "@wagmi/core";
 
 const Calculate = () => {
   const [usdAmount, setUsdAmount] = useState("");
   const [totalAmount, setTotalAmount] = useState();
   const [protonAmount, setProtonAmount] = useState("");
+  const [protonBal, setProtonBal] = useState();
+  const [todayInvestment, setTodayInvestment] = useState();
+  const { address } = getAccount();
+  const [show, setShow] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
   //   const protonValue = 10;
   const [endTime, setEndTime] = useState(Date.now() + 7 * 24 * 60 * 60 * 1000);
   const [timeLeft, setTimeLeft] = useState(endTime - Date.now());
@@ -65,9 +85,13 @@ const Calculate = () => {
   };
   const handleUsdChange = async (event) => {
     const value = event.target.value;
+    // if (!address) {
+    //   setUsdAmount(value);
+    //   alert("please connect wallet");
+    // }
     const protonValue = await getProtonCalulate(value);
     setUsdAmount(value);
-    if (value > 1) {
+    if (value > 0) {
       setProtonAmount(protonValue);
     } else {
       setProtonAmount(value);
@@ -84,8 +108,27 @@ const Calculate = () => {
   }, [endTime]);
 
   const handleSubmit = async () => {
-    let getInvest = await investNow(usdAmount);
+    if (usdAmount !== "") {
+      let getInvest = await investNow(usdAmount);
+      return null;
+    }
+    onOpen();
   };
+
+  useEffect(() => {
+    (async () => {
+      let bal = await checkTodayBalance();
+      setTodayInvestment(bal);
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      let protonBal = await checkBalanceProton(address);
+      setProtonBal(protonBal);
+      // console.log("_--_-->", protonBal);
+    })();
+  }, []);
 
   const getBalance = async () => {
     let check = await checkBalance();
@@ -102,9 +145,9 @@ const Calculate = () => {
     })();
   }, []);
 
-  // useEffect(() => {
-  //   console.log("++++>", totalAmount);
-  // }, []);
+  useEffect(() => {
+    console.log(totalAmount ? "0" : "0");
+  }, []);
 
   const formatTimeLeft = (time) => {
     const days = Math.floor(time / (1000 * 60 * 60 * 24));
@@ -152,7 +195,7 @@ const Calculate = () => {
             <h2 className="opacity-50 text-[25px] font-normal">
               Proton ROI Since Launch
             </h2>
-            <h2 className="text-[30px]">$0.00</h2>
+            <h2 className="text-[30px]">8%</h2>
           </div>
           <div className=" p-[45px] pr-[50px] rounded-3xl bg-white bg-opacity-5">
             <h2 className="opacity-50 text-[25px] font-normal">
@@ -278,7 +321,7 @@ const Calculate = () => {
           <div>
             <p className="opacity-50 text-center">Today’s Total Investment</p>
             <p className="text-[40px] text-[#FF5800] text-center">
-              ${totalAmount < 0 ? 0 : totalAmount}
+              ${todayInvestment < 0 ? 0 : todayInvestment}
             </p>
           </div>
           <hr className="border-r-2 border-r-white border-opacity-5  h-10 base:hidden lg:block" />
@@ -291,14 +334,16 @@ const Calculate = () => {
             <p className="opacity-50 text-center">
               Your total investment Today
             </p>
-            <p className="text-[40px] text-[#FF5800] text-center">$0</p>
+            <p className="text-[40px] text-[#FF5800] text-center">
+              ${protonBal < 0 ? 0 : protonBal}
+            </p>
           </div>
           <hr className="border-r-2 border-r-white border-opacity-5  h-10 base:hidden lg:block" />
           <div>
             <p className="opacity-50 text-center">
               Proton | Your Potential ROI
             </p>
-            <p className="text-[40px] text-[#FF5800] text-center">$0</p>
+            <p className="text-[40px] text-[#FF5800] text-center">8%</p>
           </div>
         </div>
         <div className="flex  justify-end text-[14px] opacity-50">
@@ -341,6 +386,38 @@ const Calculate = () => {
             <p>2024</p>
           </div>
         </div> */}
+        <>
+          <AlertDialog
+            isOpen={isOpen}
+            leastDestructiveRef={cancelRef}
+            onClose={onClose}
+          >
+            <AlertDialogOverlay>
+              <AlertDialogContent>
+                <AlertDialogHeader
+                  style={{ color: "#000" }}
+                  fontSize="lg"
+                  fontWeight="bold"
+                >
+                  Input value
+                </AlertDialogHeader>
+
+                <AlertDialogBody style={{ color: "#000" }}>
+                  Please fill the USD.
+                </AlertDialogBody>
+
+                <AlertDialogFooter>
+                  {/* <Button ref={cancelRef} onClick={onClose}>
+                    Cancel
+                  </Button> */}
+                  <Button colorScheme="red" onClick={onClose} ml={3}>
+                    close
+                  </Button>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialogOverlay>
+          </AlertDialog>
+        </>
       </div>
     </div>
   );

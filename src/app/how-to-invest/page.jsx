@@ -4,6 +4,10 @@ import React from "react";
 import bg_about from "@/app/assets/Frame.svg";
 import {
   Box,
+  Button,
+  Grid,
+  GridItem,
+  ListItem,
   Stack,
   Step,
   StepDescription,
@@ -15,22 +19,34 @@ import {
   StepStatus,
   StepTitle,
   Text,
+  UnorderedList,
   useSteps,
   VStack,
 } from "@chakra-ui/react";
 import phone from "@/app/assets/Phone@2x-8 1.svg";
-
-const steps = [
-  { title: "First", description: "Sign up" },
-  { title: "Second", description: "Complete KYC & AML" },
-  { title: "Third", description: "Add Funds" },
-  { title: "Fourth", description: "Invest" },
-];
+import Link from "next/link";
+import inv1 from "@/app/assets/inv1.svg";
+import poly1 from "@/app/assets/Polygon 1.svg";
+// import video_bg from "/video_bg.jpg";
+import { BsYoutube } from "react-icons/bs";
+import { Play, PlayCircle } from "lucide-react";
+import { IoIosArrowRoundDown, IoMdPlayCircle } from "react-icons/io";
+import logo from "@/app/assets/navbar/Real proton Png@2x-8.png";
+import building from "@/app/assets/8508760_city_buildings_building_construction_estate_icon 1.svg";
+import justice from "@/app/assets/2315987_court_justice_law_lawyer_icon 1.svg";
+import capital from "@/app/assets/4308025_capital_earnings_make_making_money_icon 1.svg";
+import keyboard from "@/app/assets/8678780_keyboard_hardware_technology_icon 1.svg";
+import one from "@/app/assets/1 (1).svg";
+import { FaArrowDownLong } from "react-icons/fa6";
+import arrow from "@/app/assets/Arrow 3.svg";
+import { css } from "@emotion/react";
+import Askquestion from "../Components/Askquestion";
 
 const Howtoinvest = () => {
+  const videoBgUrl = "/videobg.jpg";
   return (
     <>
-      {/* <div>
+      <div>
         <div className="relative">
           <Image
             src={bg_about}
@@ -43,7 +59,7 @@ const Howtoinvest = () => {
           <h1 className="base:text-[30px] md:text-[70px] lg:text-[130px] font-thin text-center relative base:-top-[14rem] md:-top-[20rem] lg:-top-[33rem] xl:-top-[25rem] 2xl:-top-[30rem]">
             How to Invest
           </h1>
-          <p className="text-[20px] w-[70%] mx-auto font-thin text-center relative -top-[30rem] ">
+          <p className="base:text-[15px] md:text-[20px] w-[70%] mx-auto font-thin text-center relative base:-top-[14rem] md:-top-[15rem] lg:-top-[32rem] xl:-top-[20rem]  2xl:-top-[30rem] ">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -54,11 +70,44 @@ const Howtoinvest = () => {
         </div>
       </div>
 
-      <Box bg={"rgba(255,255,255,0.05)"} display={"flex"}>
-        <Box w={"90%"}>
-          <Image src={phone} alt="phone" width={500} height={500} />
+      <Box bg={"rgba(255,255,255,0.05)"} display={"flex"} p={10}>
+        <Box
+          w={"90%"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          flexDirection={{
+            base: "column",
+            sm: "column",
+            md: "column",
+            lg: "column",
+            xl: "row",
+            "2xl": "row",
+          }}
+          m={"auto"}
+          gap={"2rem"}
+        >
+          <Box
+            p={{ base: "10px", md: "5rem 9rem" }}
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            w={"-webkit-fit-content"}
+          >
+            <Image
+              src={phone}
+              alt="phone"
+              width={500}
+              height={500}
+              className="md:w-fit xl:w--webkit-fit-available"
+            />
+          </Box>
           <Box>
-            <Text className="font-thin" fontSize={"20px"} lineHeight={"37px"}>
+            <Text
+              className="font-thin"
+              fontSize={"20px"}
+              lineHeight={"37px"}
+              mb={"50px"}
+            >
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -66,423 +115,748 @@ const Howtoinvest = () => {
               content here&apos;, making it look like readable English. Many
               desktop publishing packages and web page.
             </Text>
-          </Box>
 
-          <Box pos={"relative"} display={"flex"}>
-            <Box
-              bg={"rgba(255,255,255,0.05)"}
-              w={"fit-content"}
-              p={3}
-              rounded={"full"}
+            <ol className="items-center sm:flex">
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center text-[#ff5800] text-[20px] w-6 h-6 p-6 bg-white rounded-full ring-0 ring-white ring-opacity-5 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                    01
+                  </div>
+                  <div className="hidden sm:flex w-40 bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div className="mt-3 sm:pe-8">
+                  <h3 className="text-lg font-semibold dark:text-white">
+                    Sign up
+                  </h3>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center text-[#ff5800] text-[20px] w-6 h-6 p-6 bg-white rounded-full ring-0 ring-white ring-opacity-5 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                    02
+                  </div>
+                  <div className="hidden sm:flex w-40 bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div className="mt-3 sm:pe-8">
+                  <h3 className="text-lg font-semibold  dark:text-white">
+                    Complete KYC & AML
+                  </h3>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center text-[#ff5800] text-[20px] w-6 h-6 p-6 bg-white rounded-full ring-0 ring-white ring-opacity-5 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                    03
+                  </div>
+                  <div className="hidden sm:flex w-40 bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                </div>
+                <div className="mt-3 sm:pe-8">
+                  <h3 className="text-lg font-semibold  dark:text-white">
+                    Add Funds
+                  </h3>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center text-[#ff5800] text-[20px] w-6 h-6 p-6 bg-white rounded-full ring-0 ring-white ring-opacity-5 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                    04
+                  </div>
+                  {/* <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div> */}
+                </div>
+                <div className="mt-3 sm:pe-8">
+                  <h3 className="text-lg font-semibold  dark:text-white">
+                    Invest
+                  </h3>
+                </div>
+              </li>
+            </ol>
+
+            <Link
+              href={"https://www.finix196.com/site/invest"}
+              target={"_blank"}
             >
-              <Box
-                bg={"#ffff"}
-                p={3}
-                w={"fit-content"}
-                color={"#000"}
-                fontSize={"20px"}
+              <Button
+                color={"white"}
+                bg={"#ff5800"}
+                mt={"30px"}
+                variant={"outline"}
+                _hover={{ bg: "#ff5800" }}
+                border={"none"}
                 rounded={"full"}
+                w={"10rem"}
               >
-                01
-              </Box>
-            </Box>
-            <Box
-              bg={"rgba(255,255,255,0.05)"}
-              w={"fit-content"}
-              p={3}
-              rounded={"full"}
-            >
-              <Box
-                bg={"#ffff"}
-                p={3}
-                w={"fit-content"}
-                color={"#000"}
-                fontSize={"20px"}
-                rounded={"full"}
-              >
-                02
-              </Box>
-            </Box>
-            <Box
-              bg={"rgba(255,255,255,0.05)"}
-              w={"fit-content"}
-              p={3}
-              rounded={"full"}
-            >
-              <Box
-                bg={"#ffff"}
-                p={3}
-                w={"fit-content"}
-                color={"#000"}
-                fontSize={"20px"}
-                rounded={"full"}
-              >
-                03
-              </Box>
-            </Box>
-            <Box
-              bg={"rgba(255,255,255,0.05)"}
-              w={"fit-content"}
-              p={3}
-              rounded={"full"}
-            >
-              <Box
-                bg={"#ffff"}
-                p={3}
-                w={"fit-content"}
-                color={"#000"}
-                fontSize={"20px"}
-                rounded={"full"}
-              >
-                04
-              </Box>
-            </Box>
+                Invest
+              </Button>
+            </Link>
           </Box>
         </Box>
-      </Box> */}
+      </Box>
 
-      <div className="w-full relative h-[7405px] overflow-hidden text-center text-xl text-white font-made-tommy">
-        <div className="absolute top-[5087px] left-[calc(50%_-_44px)] rounded-11xl  w-[416px] h-[641px]" />
-        <img
-          className="absolute top-[3901px] left-[calc(50%_-_964px)] w-[1928px] h-[926px] object-cover"
-          alt=""
-          src="/invest/mask-group@2x.png"
-        />
-        <img
-          className="absolute top-[-355px] left-[calc(50%_-_851px)] w-[1502.9px] h-[963.2px] overflow-hidden object-contain opacity-[0.18] mix-blend-screen"
-          alt=""
-          src="/invest/frame@2x.png"
-        />
-        <img
-          className="absolute top-[112px] left-[450px] w-[1020px] h-[1001px] overflow-hidden object-contain opacity-[0.43] mix-blend-screen"
-          alt=""
-          src="/invest/frame.svg"
-        />
-        <div className="absolute top-[537px] left-[0px] [background:linear-gradient(0deg,_#101011,_#101011_50%,_rgba(16,_16,_17,_0.33))] w-[1920px] h-[602px]" />
-        <div className="absolute top-[7292.5px] left-[149.5px] box-border w-[1621px] h-px border-t-[1px] border-solid border-gray-500" />
-        <div className="absolute h-[10.09%] top-[0.08%] bottom-[89.83%] left-[calc(50%_-_960px)] w-[1920px] text-[130px]">
-          <div className="absolute h-[78.58%] top-[21.42%] bottom-[0%] left-[calc(50%_-_637px)] rounded-[50%] [background:radial-gradient(50%_50%_at_50%_50%,_rgba(255,_255,_255,_0.21),_rgba(255,_255,_255,_0))] w-[1274px] opacity-[0.43]" />
-          <div className="absolute top-[0px] left-[0px] w-[1920px] h-[662px]" />
-          <div className="absolute top-[311px] left-[calc(50%_-_397px)] font-thin">
-            How to Invest
-          </div>
-          <div className="absolute top-[472px] left-[calc(50%_-_714px)] text-xl leading-[37px] font-thin inline-block w-[1428px]">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using &apos;Content here,
-            content here&apos;, making it look like readable English. Many
-            desktop publishing packages and web page
-          </div>
-        </div>
-        <div className="absolute top-[4950px] left-[calc(50%_-_379px)] text-41xl font-thin">
-          {" "}
-          Our Platforms Key Numbers
-        </div>
-        <div className="absolute top-[1573px] left-[calc(50%_-_141px)] text-3xl font-medium text-orangered">
+      <Box p={10}>
+        <Text textAlign={"center"} color={"#ff5800"} fontSize={"22px"}>
           How Proton Platform Works
-        </div>
-        <div className="absolute top-[1616px] left-[calc(50%_-_379px)] text-41xl font-thin">
-          {" "}
+        </Text>
+        <Text
+          textAlign={"center"}
+          fontSize={{
+            base: "40px",
+            sm: "60px",
+            md: "60px",
+            lg: "60px",
+            xl: "60px",
+          }}
+          fontWeight={"thin"}
+        >
           Our Platforms Key Numbers
-        </div>
-        <div className="absolute top-[3901px] left-[calc(50%_-_964px)]  w-[1928px] h-[926px]" />
-        <div className="absolute top-[4264px] left-[calc(50%_-_505px)] text-[90px]">
-          How Our Platform Works
-        </div>
-        <div className="absolute top-[4402px] left-[calc(50%_-_696px)] leading-[37px] font-thin inline-block w-[1392px]">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here,
-        </div>
-        <div className="absolute h-[0.84%] w-[11.93%] top-[60.95%] right-[44.01%] bottom-[38.22%] left-[44.06%] text-[15px]">
-          <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] rounded-13xl bg-orangered" />
-          <img
-            className="absolute top-[16px] left-[39px] w-[30px] h-[30px] overflow-hidden"
-            alt=""
-            src="/invest/3669296-circle-filled-play-ic-icon-1.svg"
-          />
-          <div className="absolute top-[33.87%] left-[32.31%] font-medium">
-            Watch Full Video
-          </div>
-        </div>
-        <img
-          className="absolute top-[4123px] left-[calc(50%_-_63px)] w-[126px] h-[126px] overflow-hidden"
-          alt=""
-          src="/invest/5305164-play-video-youtube-youtube-logo-icon-1.svg"
-        />
-        <div className="absolute top-[5087px] left-[191px] rounded-11xl  w-[704px] h-[641px]" />
-        <div className="absolute top-[5113px] left-[220px] rounded-xl bg-white bg-opacity-5 box-border w-[646px] h-[589px] border-[1px] border-solid border-gray-700" />
-        <div className="absolute top-[5113px] left-[942px] rounded-xl bg-white bg-opacity-5 box-border w-[363px] h-[589px] border-[1px] border-solid border-gray-700" />
-        <div className="absolute top-[5113px] left-[1380px] rounded-xl bg-white bg-opacity-5 box-border w-[363px] h-[589px] border-[1px] border-solid border-gray-700" />
-        <div className="absolute top-[5087px] left-[calc(50%_+_394px)] rounded-11xl  w-[416px] h-[641px]" />
-        <div className="absolute top-[5435px] left-[calc(50%_-_652px)] text-6xl leading-[43px] font-light inline-block w-[469px]">
-          It is a long established fact that a reader will be distracted by the
-          readable
-        </div>
-        <div className="absolute top-[5738px] left-[calc(50%_+_559px)] leading-[43px] opacity-[0.26]">
-          <span className="font-light">Data Updated on :</span>
-          <b> 24.07.24</b>
-        </div>
-        <div className="absolute top-[5295px] left-[calc(50%_-_661px)] text-[65px] font-light text-orangered">
-          $25,60,000
-        </div>
-        <div className="absolute top-[5311px] left-[calc(50%_+_457px)] text-[65px] font-light text-orangered">
-          $10,00,00
-        </div>
-        <div className="absolute top-[5438px] left-[calc(50%_-_4px)] text-6xl leading-[43px] font-light inline-block w-[337px]">{`It is a long established fact that a reader will `}</div>
-        <div className="absolute top-[5438px] left-[calc(50%_+_426px)] text-6xl leading-[43px] font-light inline-block w-[351px]">
-          It is a long established fact that a reader will be distracted by the
-          readable
-        </div>
-        <div className="absolute top-[5314px] left-[calc(50%_+_88px)] text-[65px] font-light text-orangered">
-          1,205
-        </div>
-        <div className="absolute top-[814px] left-[0px]  w-[1920px] h-[686px]" />
-        <div className="absolute top-[852px] left-[150px] rounded-[22px]  w-[569px] h-[610px]" />
-        <img
-          className="absolute top-[926px] left-[316px] w-[238px] h-[462px] object-contain"
-          alt=""
-          src="/invest/phone2x8-1@2x.png"
-        />
-        <div className="absolute top-[5894px] left-[calc(50%_-_810px)] w-[1620px] h-[1238px] text-3xl">
-          <div className="absolute top-[0px] left-[calc(50%_-_810px)] rounded-[40px]  box-border w-[1620px] h-[1238px] border-[1px] border-solid border-gray-900" />
-          <div className="absolute top-[146px] left-[calc(50%_-_696px)] text-xl leading-[37px] font-thin inline-block w-[1392px]">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using &apos;Content here,
-          </div>
-          <img
-            className="absolute top-[55.7px] left-[683px] w-[254px] h-[58.3px] opacity-[0.28]"
-            alt=""
-            src="/invest/group-1321316077.svg"
-          />
-          <div className="absolute top-[279px] left-[calc(50%_-_720px)] w-[271.2px] h-64 text-xl">
-            <div className="absolute top-[0px] left-[calc(50%_-_135.6px)] rounded-3xl  box-border w-[271.2px] h-64 border-[1px] border-solid border-gray-1000" />
-            <div className="absolute top-[175.9px] left-[calc(50%_-_121.5px)]">
-              Real Estate Leader Groups
-            </div>
-            <div className="absolute top-[54px] left-[calc(50%_-_48.9px)] rounded-[50%]  box-border w-[97.1px] h-[97.1px] border-[1px] border-solid border-gray-1200" />
-          </div>
-          <div className="absolute top-[279px] left-[calc(50%_-_428px)] w-[271.2px] h-64">
-            <div className="absolute top-[0px] left-[calc(50%_-_135.6px)] rounded-3xl  box-border w-[271.2px] h-64 border-[1px] border-solid border-gray-1000" />
-            <div className="absolute top-[175.9px] left-[calc(50%_-_50.5px)]">
-              Law Firms
-            </div>
-            <div className="absolute top-[54px] left-[calc(50%_-_48.9px)] rounded-[50%]  box-border w-[97.1px] h-[97.1px] border-[1px] border-solid border-gray-1200" />
-          </div>
-          <div className="absolute top-[279px] left-[calc(50%_-_136px)] w-[271.2px] h-64">
-            <div className="absolute top-[0px] left-[calc(50%_-_135.6px)] rounded-3xl  box-border w-[271.2px] h-64 border-[1px] border-solid border-gray-1000" />
-            <div className="absolute top-[175.9px] left-[calc(50%_-_97.5px)]">
-              Finix196 Capital Inc
-            </div>
-            <div className="absolute top-[54px] left-[calc(50%_-_48.9px)] rounded-[50%]  box-border w-[97.1px] h-[97.1px] border-[1px] border-solid border-gray-1200" />
-          </div>
-          <div className="absolute top-[279px] left-[calc(50%_+_156px)] w-[271.2px] h-64">
-            <div className="absolute top-[0px] left-[calc(50%_-_135.6px)] rounded-3xl  box-border w-[271.2px] h-64 border-[1px] border-solid border-gray-1000" />
-            <div className="absolute top-[175.9px] left-[calc(50%_-_77.5px)]">
-              ATS Integration
-            </div>
-            <div className="absolute top-[54px] left-[calc(50%_-_48.9px)] rounded-[50%] bg-gray-200 box-border w-[97.1px] h-[97.1px] border-[1px] border-solid border-gray-1200" />
-          </div>
-          <div className="absolute top-[279px] left-[calc(50%_+_448px)] w-[271.2px] h-64">
-            <div className="absolute top-[0px] left-[calc(50%_-_135.6px)] rounded-3xl bg-gray-1100 box-border w-[271.2px] h-64 border-[1px] border-solid border-gray-1000" />
-            <div className="absolute top-[175.9px] left-[calc(50%_-_69.5px)]">
-              Auction Sales
-            </div>
-            <div className="absolute top-[54px] left-[calc(50%_-_48.9px)] rounded-[50%] bg-gray-200 box-border w-[97.1px] h-[97.1px] border-[1px] border-solid border-gray-1200" />
-          </div>
-          <div className="absolute top-[700px] left-[calc(50%_-_719px)] w-[1438px] h-[432px] text-xl">
-            <div className="absolute top-[0px] left-[calc(50%_-_719px)] w-[1438px] h-[432px]">
-              <div className="absolute top-[0px] left-[calc(50%_-_719px)] rounded-3xl bg-gray-1400 box-border w-[1438px] h-[432px] border-[1px] border-solid border-gray-1300" />
-              <div className="absolute top-[133px] left-[102px] w-[360px] flex flex-col items-start justify-start gap-[18px]">
-                <div className="self-stretch relative leading-[37px] font-thin text-left">
-                  Deep Liquidity
-                </div>
-                <div className="relative leading-[37px] font-thin">
-                  Valuation-Derived Pricing
-                </div>
-                <div className="relative leading-[37px] font-thin">
-                  Minimum Selling Cost
-                </div>
-              </div>
-              <div className="absolute top-[133px] left-[873px] w-[360px] flex flex-col items-start justify-start gap-[18px]">
-                <div className="relative leading-[37px] font-thin">
-                  High Vaule Real Estate
-                </div>
-                <div className="relative leading-[37px] font-thin">
-                  Monthly Yield
-                </div>
-                <div className="relative leading-[37px] font-thin">
-                  Flexible Exit
-                </div>
-                <div className="relative leading-[37px] font-thin">
-                  Stable Investment
-                </div>
-              </div>
-              <div className="absolute top-[114px] left-[calc(50%_-_0px)] box-border w-px h-[205px] border-r-[1px] border-solid border-gray-1500" />
-              <div className="absolute top-[68px] left-[calc(50%_-_617px)] text-6xl leading-[37px] text-justify">
-                What Owners Get
-              </div>
-              <div className="absolute top-[68px] left-[calc(50%_+_154px)] text-6xl leading-[37px] text-justify">
-                What Investor Get
-              </div>
-              <img
-                className="absolute top-[148px] left-[84px] w-2 h-[118px]"
-                alt=""
-                src="/invest/group-1321316090.svg"
-              />
-            </div>
-            <img
-              className="absolute top-[147px] left-[855px] w-2 h-[173px]"
-              alt=""
-              src="/invest/group-1321316091.svg"
-            />
-          </div>
-          <img
-            className="absolute top-[535px] left-[226px] max-w-full overflow-hidden h-[165px] object-contain"
-            alt=""
-            src="/invest/arrow-3.svg"
-          />
-          <img
-            className="absolute top-[535px] left-[517px] max-w-full overflow-hidden h-[165px] object-contain"
-            alt=""
-            src="/invest/arrow-3.svg"
-          />
-          <img
-            className="absolute top-[535px] left-[808px] max-w-full overflow-hidden h-[165px] object-contain"
-            alt=""
-            src="/invest/arrow-3.svg"
-          />
-          <img
-            className="absolute top-[535px] left-[1099px] max-w-full overflow-hidden h-[165px] object-contain"
-            alt=""
-            src="/invest/arrow-3.svg"
-          />
-          <img
-            className="absolute top-[535px] left-[1390px] max-w-full overflow-hidden h-[165px] object-contain"
-            alt=""
-            src="/invest/arrow-3.svg"
-          />
-        </div>
-        <div className="absolute top-[922px] left-[calc(50%_-_144px)] w-[972px] h-[429px] text-lgi">
-          <div className="absolute top-[0px] left-[calc(50%_-_486px)] w-[972px] h-[429px] text-left text-xl">
-            <div className="absolute top-[0px] left-[calc(50%_-_484px)] leading-[37px] font-thin inline-block w-[970px]">
+        </Text>
+
+        <Grid
+          w={{
+            base: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "90%",
+          }}
+          m={"auto"}
+          mt={"6rem"}
+          gap={"4rem"}
+          gridTemplateColumns={{
+            base: "repeat(1,1fr)",
+            sm: "repeat(1,1fr)",
+            md: "repeat(1,1fr)",
+            lg: "repeat(1,1fr)",
+            xl: "repeat(2,1fr)",
+          }}
+        >
+          <GridItem
+            order={{ base: 2, xl: 1 }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <Text fontSize={"30px"} mb={"30px"}>
+              Finding and checking a property
+            </Text>
+            <Text fontSize={"20px"} fontWeight={"thin"} lineHeight={"37px"}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
               distribution of letters, as opposed to using &apos;Content here,
               content here&apos;, making it look like readable English. Many
               desktop publishing packages and web page
-            </div>
-            <div className="absolute top-[231px] left-[37px] box-border w-[654px] h-px border-t-[1px] border-solid border-gray-1600" />
-            <img
-              className="absolute top-[195px] left-[0px] w-[75px] h-[75px]"
-              alt=""
-              src="/invest/group-1321316096.svg"
+            </Text>
+          </GridItem>
+          <GridItem
+            order={{ base: 1, xl: 2 }}
+            className="relative flex justify-center items-center"
+          >
+            <Image
+              src={poly1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="relative z-0 base:-top-[40px] base:left-[40px] md:-top-[100px] md:left-[90px]"
             />
-            <img
-              className="absolute top-[195px] left-[217.4px] w-[75px] h-[75px]"
-              alt=""
-              src="/invest/group-1321316097.svg"
+            <Image
+              src={inv1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="absolute z-10 top-0"
             />
-            <img
-              className="absolute top-[195px] left-[434.8px] w-[75px] h-[75px]"
-              alt=""
-              src="/invest/group-1321316098.svg"
+          </GridItem>
+          <GridItem
+            order={{ base: 4, xl: 3 }}
+            className="relative flex justify-center items-center"
+          >
+            <Image
+              src={poly1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="relative z-0 base:-top-[50px] base:-left-[40px] xl:-top-[100px] -left-[80px] -rotate-90"
             />
-            <img
-              className="absolute top-[195px] left-[652px] w-[75px] h-[75px]"
-              alt=""
-              src="/invest/group-1321316096.svg"
+            <Image
+              src={inv1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="absolute z-10 xl:top-0"
             />
-            <div className="absolute h-[14.45%] w-[23.56%] top-[85.55%] right-[76.23%] bottom-[0%] left-[0.21%] text-center text-mid">
-              <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] rounded-13xl bg-orangered" />
-              <div className="absolute top-[33.87%] left-[39.74%] font-medium">
-                Invest
-              </div>
-            </div>
-          </div>
-          <div className="absolute top-[51.52%] left-[2.67%] font-medium text-orangered">
-            01
-          </div>
-          <div className="absolute top-[51.52%] left-[25%] font-medium text-orangered">
-            02
-          </div>
-          <div className="absolute top-[51.52%] left-[47.43%] font-medium text-orangered">
-            03
-          </div>
-          <div className="absolute top-[51.52%] left-[69.75%] font-medium text-orangered">
-            04
-          </div>
-          <div className="absolute top-[66.9%] left-[0.82%] text-mid font-medium">
-            Sign up
-          </div>
-          <div className="absolute top-[66.9%] left-[17.49%] text-mid font-medium">{`Complete KYC & AML`}</div>
-          <div className="absolute top-[66.9%] left-[44.34%] text-mid font-medium">
-            Add Funds
-          </div>
-          <div className="absolute top-[66.9%] left-[68.62%] text-mid font-medium">
+          </GridItem>
+          <GridItem
+            order={{ base: 4, xl: 3 }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <Text fontSize={"30px"} mb={"30px"}>
+              Finding and checking a property
+            </Text>
+            <Text fontSize={"20px"} fontWeight={"thin"} lineHeight={"37px"}>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using &apos;Content here,
+              content here&apos;, making it look like readable English. Many
+              desktop publishing packages and web page
+            </Text>
+          </GridItem>
+          <GridItem
+            order={{ base: 6, xl: 5 }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <Text fontSize={"30px"} mb={"30px"}>
+              Finding and checking a property
+            </Text>
+            <Text fontSize={"20px"} fontWeight={"thin"} lineHeight={"37px"}>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using &apos;Content here,
+              content here&apos;, making it look like readable English. Many
+              desktop publishing packages and web page
+            </Text>
+          </GridItem>
+          <GridItem order={{ base: 5, xl: 6 }} className="relative">
+            <Image
+              src={poly1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="relative z-0 base:-top-[40px] base:left-[40px] md:-top-[100px] md:left-[90px]"
+            />
+            <Image
+              src={inv1}
+              width={500}
+              height={500}
+              alt="poly"
+              className="absolute z-10 top-0"
+            />
+          </GridItem>
+        </Grid>
+      </Box>
+
+      <Box
+        backgroundImage={`url(${videoBgUrl})`}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        p={{
+          base: "20px",
+          sm: "20px",
+          md: "5rem",
+          lg: "10rem",
+          xl: "10rem",
+        }}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={"column"}
+      >
+        <BsYoutube size={"4rem"} />
+        <Text
+          fontSize={{
+            base: "26px",
+            sm: "26px",
+            md: "50px",
+            lg: "50px",
+            xl: "90px",
+            "2xl": "90px",
+          }}
+          textAlign={"center"}
+        >
+          How Our Platform Works
+        </Text>
+        <Text
+          fontSize={"18px"}
+          textAlign={"center"}
+          fontWeight={"thin"}
+          w={{
+            base: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "70%",
+          }}
+        >
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using &apos;Content here,
+        </Text>
+        <Link href={"https://www.finix196.com/site/invest"} target={"_blank"}>
+          <Button
+            color={"white"}
+            bg={"#ff5800"}
+            mt={"30px"}
+            variant={"outline"}
+            _hover={{ bg: "#ff5800" }}
+            border={"none"}
+            rounded={"full"}
+            w={"13rem"}
+            p={6}
+            display={"flex"}
+            gap={3}
+          >
+            <IoMdPlayCircle size={25} />
             Invest
-          </div>
-        </div>
-        <div className="absolute top-[2032px] left-[calc(50%_-_811px)] leading-[37px] font-thin text-left inline-block w-[821px]">
+          </Button>
+        </Link>
+      </Box>
+
+      <Box>
+        <h2 className="base:text-[30px] md:text-[50px] font-thin text-center  mt-16">
+          Our Platforms Key Numbers
+        </h2>
+
+        <Grid
+          gridTemplateColumns={{
+            base: "repeat(1,1fr)",
+            sm: "repeat(1,1fr)",
+            md: "repeat(1,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(4,1fr)",
+          }}
+          gap={"20px"}
+          w={{
+            base: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "90%",
+            "2xl": "80%",
+          }}
+          mx={"auto"}
+          mt={10}
+        >
+          <GridItem
+            bg={"rgba(255,255,255,0.02)"}
+            p={4}
+            colSpan={{
+              base: 1,
+              sm: 1,
+              md: 1,
+              lg: 2,
+              xl: 2,
+              "2xl": 2,
+            }}
+            rounded={"2xl"}
+          >
+            <Box
+              border={"1px solid rgba(255,255,255,0.2)"}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexDir={"column"}
+              p={{
+                base: "40px 20px",
+                sm: "40px 20px",
+                md: "180px 80px",
+                lg: "180px 80px",
+                xl: "180px 80px",
+              }}
+              rounded={"2xl"}
+            >
+              <Text
+                fontWeight={"light"}
+                fontSize={{
+                  base: "45px",
+                  sm: "45px",
+                  md: "96px",
+                  lg: "96px",
+                  xl: "96px",
+                }}
+                color={"#ff5800"}
+              >
+                $25,60,000
+              </Text>
+              <Text
+                fontSize={{
+                  base: "16px",
+                  sm: "16px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "20px",
+                }}
+                fontWeight={"thin"}
+                textAlign={"center"}
+              >
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </Text>
+            </Box>
+          </GridItem>
+          <GridItem
+            colSpan={{
+              base: 1,
+              sm: 1,
+              md: 1,
+              lg: 1,
+              xl: 1,
+              "2xl": 1,
+            }}
+            bg={"rgba(255,255,255,0.02)"}
+            p={4}
+            rounded={"2xl"}
+          >
+            <Box
+              border={"1px solid rgba(255,255,255,0.2)"}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexDir={"column"}
+              p={{
+                base: "40px 20px",
+                sm: "40px 20px",
+                md: "180px 80px",
+                lg: "180px 80px",
+                xl: "180px 80px",
+              }}
+              rounded={"2xl"}
+            >
+              <Text
+                fontWeight={"light"}
+                fontSize={{
+                  base: "35px",
+                  sm: "35px",
+                  md: "65px",
+                  lg: "65px",
+                  xl: "65px",
+                }}
+                color={"#ff5800"}
+              >
+                1,205
+              </Text>
+              <Text
+                fontSize={{
+                  base: "16px",
+                  sm: "16px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "20px",
+                }}
+                fontWeight={"thin"}
+                textAlign={"center"}
+              >
+                It is a long established fact that a reader will
+              </Text>
+            </Box>
+          </GridItem>
+          <GridItem
+            bg={"rgba(255,255,255,0.02)"}
+            p={4}
+            rounded={"2xl"}
+            colSpan={{
+              base: 1,
+              sm: 1,
+              md: 1,
+              lg: 3,
+              xl: 1,
+              "2xl": 1,
+            }}
+          >
+            <Box
+              border={"1px solid rgba(255,255,255,0.2)"}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexDir={"column"}
+              p={{
+                base: "20px 10px",
+                sm: "20px 10px",
+                md: "185px 10px",
+                lg: "185px 10px",
+                xl: "185px 10px",
+              }}
+              rounded={"2xl"}
+            >
+              <Text
+                fontWeight={"light"}
+                fontSize={{
+                  base: "35px",
+                  sm: "35px",
+                  md: "65px",
+                  lg: "65px",
+                  xl: "65px",
+                }}
+                color={"#ff5800"}
+              >
+                $10,00,00
+              </Text>
+              <Text
+                fontSize={{
+                  base: "16px",
+                  sm: "16px",
+                  md: "20px",
+                  lg: "20px",
+                  xl: "20px",
+                }}
+                fontWeight={"thin"}
+                textAlign={"center"}
+              >
+                It is a long established fact that a reader will be distracted
+                by the readable
+              </Text>
+            </Box>
+          </GridItem>
+        </Grid>
+        <Box
+          display={"flex"}
+          justifyContent={"flex-end"}
+          w={{
+            base: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+            xl: "90%",
+            "2xl": "80%",
+          }}
+          mx={"auto"}
+          mt={2}
+        >
+          <Text opacity={0.2}>Data Updated on : 24.07.24</Text>
+        </Box>
+      </Box>
+
+      <Box
+        border={"1px solid rgba(255,255,255,0.2)"}
+        bg={"rgba(255,255,255,0.05)"}
+        p={{
+          base: 4,
+          sm: 4,
+          md: 10,
+          lg: 10,
+          xl: 10,
+        }}
+        w={"90%"}
+        mx={"auto"}
+        mt={"5rem"}
+        rounded={"3xl"}
+      >
+        <Box display={"flex"} justifyContent={"center"} opacity={0.2}>
+          <Image src={logo} width={500} height={500} alt="logo" />
+        </Box>
+        <Text
+          mt={6}
+          w={{
+            base: "100%",
+            sm: "100%",
+            md: "70%",
+            lg: "70%",
+            xl: "70%",
+          }}
+          textAlign={"center"}
+          mx={"auto"}
+        >
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here, content here&apos;,
-          making it look like readable English. Many desktop publishing packages
-          and web page
-        </div>
-        <div className="absolute top-[3448px] left-[calc(50%_-_811px)] leading-[37px] font-thin text-left inline-block w-[821px]">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here, content here&apos;,
-          making it look like readable English. Many desktop publishing packages
-          and web page
-        </div>
-        <div className="absolute top-[2758px] left-[calc(50%_-_4px)] leading-[37px] font-thin text-left inline-block w-[821px]">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here, content here&apos;,
-          making it look like readable English. Many desktop publishing packages
-          and web page
-        </div>
-        <div className="absolute top-[1968px] left-[calc(50%_-_811px)] text-11xl">
-          Finding and checking a property
-        </div>
-        <div className="absolute top-[1442px] left-[1047px] w-[1011px] h-[1011px]">
-          <img
-            className="absolute top-[20%] left-[20%] rounded-63xl w-[60%]  object-contain"
-            alt=""
-            src="/invest/polygon-1.svg"
-          />
-          <div className="absolute top-[375px] left-[44px] rounded-9xl bg-black  w-[592px] h-[513px] border-[1px] " />
-        </div>
-        <div className="absolute top-[3384px] left-[calc(50%_-_811px)] text-11xl">
-          Verified experts manage properties
-        </div>
-        <div className="absolute top-[2696px] left-[calc(50%_-_4px)] text-11xl">
-          Property lists to the marketplace
-        </div>
-        <div className="absolute top-[2858px] left-[1047px] w-[1011px] h-[1011px]">
-          <img
-            className="absolute top-[20%] left-[20%] rounded-63xl w-[60%] object-contain"
-            alt=""
-            src="/invest/polygon-1.svg"
-          />
-          <div className="absolute top-[375px] left-[44px] rounded-9xl box-border bg-black w-[592px] h-[513px] border-[1px] border-solid border-gray-1700" />
-        </div>
-        <img
-          className="absolute top-[2169px] left-[-133px] w-[1011px] h-[1011px] object-contain"
-          alt=""
-          src="/invest/group-1321316117@2x.png"
-        />
-      </div>
+          letters, as opposed to using &apos;Content here,
+        </Text>
+        <Grid
+          gridTemplateColumns={{
+            base: "repeat(1,1fr)",
+            sm: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(5,1fr)",
+            "2xl": "repeat(5,1fr)",
+          }}
+          gap={6}
+          mt={10}
+        >
+          <GridItem
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            border={"1px solid rgba(255,255,255,0.2)"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            p={"50px 14px"}
+          >
+            <Box
+              p={6}
+              border={"2px solid rgba(255,255,255,0.2)"}
+              bg={"#171717"}
+              rounded={"full"}
+              mb={"25px"}
+            >
+              <Image src={building} width={50} height={50} alt="building" />
+            </Box>
+            <Text fontSize={"20px"}>Real Estate Leader Groups</Text>
+          </GridItem>
+          <GridItem
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            border={"1px solid rgba(255,255,255,0.2)"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            p={"50px 14px"}
+          >
+            <Box
+              p={6}
+              border={"2px solid rgba(255,255,255,0.2)"}
+              bg={"#171717"}
+              rounded={"full"}
+              mb={"25px"}
+            >
+              <Image src={justice} width={50} height={50} alt="building" />
+            </Box>
+            <Text fontSize={"20px"}>Law Firms</Text>
+          </GridItem>
+          <GridItem
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            border={"1px solid rgba(255,255,255,0.2)"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            p={"50px 14px"}
+          >
+            <Box
+              p={6}
+              border={"2px solid rgba(255,255,255,0.2)"}
+              bg={"#171717"}
+              rounded={"full"}
+              mb={"25px"}
+            >
+              <Image src={capital} width={50} height={50} alt="building" />
+            </Box>
+            <Text fontSize={"20px"}>Finix196 Capital Inc</Text>
+          </GridItem>
+          <GridItem
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            border={"1px solid rgba(255,255,255,0.2)"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            p={"50px 14px"}
+          >
+            <Box
+              p={6}
+              border={"2px solid rgba(255,255,255,0.2)"}
+              bg={"#171717"}
+              rounded={"full"}
+              mb={"25px"}
+            >
+              <Image src={keyboard} width={50} height={50} alt="building" />
+            </Box>
+            <Text fontSize={"20px"}>ATS Integration</Text>
+          </GridItem>
+          <GridItem
+            rounded={"3xl"}
+            bg={"rgba(255,255,255,0.05)"}
+            border={"1px solid rgba(255,255,255,0.2)"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            p={"50px 14px"}
+          >
+            <Box
+              p={6}
+              border={"2px solid rgba(255,255,255,0.2)"}
+              bg={"#171717"}
+              rounded={"full"}
+              mb={"25px"}
+            >
+              <Image src={one} width={50} height={50} alt="building" />
+            </Box>
+            <Text fontSize={"20px"}>Auction Sales</Text>
+          </GridItem>
+        </Grid>
+        <Grid
+          display={{
+            base: "none",
+            xl: "grid",
+          }}
+          gridTemplateColumns={"repeat(5,1fr)"}
+          gap={6}
+        >
+          <GridItem display={"flex"} justifyContent={"center"}>
+            <Image src={arrow} width={10} height={10} alt="arrow" />
+          </GridItem>
+          <GridItem display={"flex"} justifyContent={"center"}>
+            <Image src={arrow} width={10} height={10} alt="arrow" />
+          </GridItem>
+          <GridItem display={"flex"} justifyContent={"center"}>
+            <Image src={arrow} width={10} height={10} alt="arrow" />
+          </GridItem>
+          <GridItem display={"flex"} justifyContent={"center"}>
+            <Image src={arrow} width={10} height={10} alt="arrow" />
+          </GridItem>
+          <GridItem display={"flex"} justifyContent={"center"}>
+            <Image src={arrow} width={10} height={10} alt="arrow" />
+          </GridItem>
+        </Grid>
+        <Box
+          bg={"rgba(0,0,0,0.3)"}
+          border={"1px solid rgba(255,255,255,0.2)"}
+          p={10}
+          display={"flex"}
+          flexDirection={{
+            base: "column",
+            md: "row",
+          }}
+          justifyContent={"space-around"}
+          rounded={"3xl"}
+          mt={{
+            base: 20,
+            xl: 0,
+          }}
+        >
+          <Box>
+            <Text mb={"30px"} fontSize={"25px"}>
+              What Owners Get
+            </Text>
+            <UnorderedList
+              styleType="disc"
+              css={css`
+                & > li::marker {
+                  color: #ff5800;
+                }
+              `}
+            >
+              <ListItem>Deep Liquidity</ListItem>
+              <ListItem>Valuation-Derived Pricing</ListItem>
+              <ListItem>Minimum Selling Cost</ListItem>
+            </UnorderedList>
+          </Box>
+          <Box h={"auto"} borderRight={"2px solid rgba(255,255,255,0.2)"}></Box>
+          <Box>
+            <Text mb={"30px"} fontSize={"25px"}>
+              What Investor Get
+            </Text>
+            <UnorderedList
+              styleType="disc"
+              css={css`
+                & > li::marker {
+                  color: #ff5800;
+                }
+              `}
+            >
+              <ListItem>High Vaule Real Estate</ListItem>
+              <ListItem>Monthly Yield</ListItem>
+              <ListItem>Flexible Exit</ListItem>
+              <ListItem>Stable Investment</ListItem>
+            </UnorderedList>
+          </Box>
+        </Box>
+      </Box>
+
+      <Askquestion />
     </>
   );
 };
