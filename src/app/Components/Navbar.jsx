@@ -37,7 +37,7 @@ const Navbar = () => {
   }, []);
 
   const metaMask = () => {
-    if (address === undefined) {
+    if (!address) {
       open();
     }
   };
