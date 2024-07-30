@@ -76,7 +76,7 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-          <Menu>
+          {/* <Menu>
             <MenuButton display={{ base: "block", lg: "none" }}>
               <HamburgerIcon boxSize={6} />
             </MenuButton>
@@ -90,7 +90,7 @@ const Navbar = () => {
                 </Button>
               </MenuItem>
             </MenuList>
-          </Menu>
+          </Menu> */}
         </nav>
       </header>
     </>
