@@ -1,24 +1,15 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import logo from "@/app/assets/navbar/logo1.svg";
-import Link from "next/link";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-import { MdOutlineContentCopy } from "react-icons/md";
 import { Tooltip } from "@chakra-ui/react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { MdOutlineContentCopy } from "react-icons/md";
 
+import { HamburgerIcon } from "@chakra-ui/icons";
+import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useAccount } from "wagmi";
-import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import { getAccountDetails } from "../blockchain/commonFunction";
 
 const Navbar = () => {
@@ -26,21 +17,22 @@ const Navbar = () => {
   const { address } = useAccount();
   const [copyStatus, setCopyStatus] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.ethereum) {
-      window.ethereum.on("accountsChanged", async () => {
-        window.location.reload();
-        await getAccountDetails();
-      });
-      window.ethereum.on("chainChanged", () => window.location.reload());
-    }
-  }, [address]);
+  if (typeof window !== "undefined" && window.ethereum) {
+    window.ethereum.on("accountsChanged", async () => {
+      window.location.reload();
+      await getAccountDetails();
+    });
+    window.ethereum.on("chainChanged", () => window.location.reload());
+  }
 
-  const metaMask = () => {
-    if (!address) {
-      open();
+  const metaMask = async () => {
+    try {
+      if (!address) {
+        await open();
+      }
+    } catch (error) {
+      console.error("Error opening Web3Modal:", error);
     }
-    console.log("Hii");
   };
 
   const handleMenuItemClick = (id) => {
