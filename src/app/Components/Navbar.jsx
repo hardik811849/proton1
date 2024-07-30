@@ -26,13 +26,15 @@ const Navbar = () => {
   const { address } = useAccount();
   const [copyStatus, setCopyStatus] = useState(false);
 
-  if (window.ethereum) {
-    window.ethereum.on("accountsChanged", async (_) => {
-      window.location.reload();
-      await getAccountDetails();
-    });
-    window.ethereum.on("chainChanged", (_) => window.location.reload());
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.ethereum) {
+      window.ethereum.on("accountsChanged", async (_) => {
+        window.location.reload();
+        await getAccountDetails();
+      });
+      window.ethereum.on("chainChanged", (_) => window.location.reload());
+    }
+  }, []);
 
   const metaMask = () => {
     if (address === undefined) {
